@@ -13,18 +13,40 @@ public class PlayerHP : MonoBehaviour {
 
 	public Slider[] healthBars;
 
+	private bool dead = false;
+
 	// Use this for initialization
 	void Start () 
 	{
 		health = startingHealth;
 		stocks = startingStocks;
+
+		foreach ( Slider slider in healthBars )
+		{
+			slider.maxValue = startingHealth;
+			slider.minValue = 0f;
+			slider.value = slider.maxValue;
+		}
 	}
 
 	void Update()
 	{
-		if ( health == 0 )
+		if ( health <= 0f )
 		{
-			PlayerDie();
+			if ( !dead )
+			{
+				PlayerDying();
+			}
+			else
+			{
+				PlayerDead();
+			}		
+		}
+
+		if ( stocks > 0)
+		{
+			Slider slider = healthBars[stocks-1];
+			slider.value = health;
 		}
 	}
 
@@ -32,9 +54,9 @@ public class PlayerHP : MonoBehaviour {
 	{
 		health -= damage ;
 
-		if ( health < 0 )
+		if ( health < 0f )
 		{
-			health = 0;
+			health = 0f;
 		}
 		else if ( health > startingHealth )
 		{
@@ -46,9 +68,9 @@ public class PlayerHP : MonoBehaviour {
 	{
 		health -= startingHealth * Mathf.Clamp01( damage );
 
-		if ( health < 0 )
+		if ( health < 0f )
 		{
-			health = 0;
+			health = 0f;
 		}
 		else if ( health > startingHealth )
 		{
@@ -56,17 +78,24 @@ public class PlayerHP : MonoBehaviour {
 		}
 	}
 
-	void PlayerDie()
+	void PlayerDying()
 	{
+		dead = true;
+
 		stocks--;
 		Destroy( healthBars[stocks], healthBarDestroyDelay );
 		health = startingHealth;
 
-		// play a death animation and respawn here
+		// start playing a death animation and respawn here
 
 		if ( stocks == 0 )
 		{
 			// trigger the end of the game here
 		}
+	}
+
+	void PlayerDead()
+	{
+		// nothing here yet, could do some animation for the other player?
 	}
 }
