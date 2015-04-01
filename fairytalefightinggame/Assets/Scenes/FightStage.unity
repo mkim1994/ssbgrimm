@@ -633,6 +633,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a9edf4111a67419b6b04215ccaf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpButton: 
+  DownButton: 
+  RightButton: 
+  LeftButton: 
+  jumpforce: 0
+  speed: 0
+  direction: 0
 --- !u!1 &1075626590
 GameObject:
   m_ObjectHideFlags: 0
