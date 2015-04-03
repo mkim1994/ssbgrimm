@@ -25,7 +25,7 @@ public class MoveControl : MonoBehaviour {
 
 		body = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-		oldDirection = transform.localScale.x;
+		oldDirection = - transform.localScale.x / Mathf.Abs (transform.localScale.x);
 	}
 
 	// Each frame - read controller movement input 
