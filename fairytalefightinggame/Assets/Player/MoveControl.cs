@@ -24,8 +24,6 @@ public class MoveControl : MonoBehaviour {
 
 		body = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-
-		Debug.Log( UpButton + LeftButton + DownButton + RightButton );
 	}
 
 	// Each frame - read controller movement input 
@@ -109,7 +107,6 @@ public class MoveControl : MonoBehaviour {
 		}
 	}
 
-	// TODO - we've been warned this may not work
 	void OnCollisionExit2D( Collision2D collision )
 	{
 		if ( collision.gameObject.tag == "Ground" )
