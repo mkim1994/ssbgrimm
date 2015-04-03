@@ -47,9 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 1532109775
     locked: 0
-  - name: Hud
-    uniqueID: 2265324645
-    locked: 0
   - name: Menu
     uniqueID: 240524413
+    locked: 0
+  - name: Hud
+    uniqueID: 2265324645
     locked: 0
