@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: a8c1a9c76d5a0b04d9b56fc937098ba0
-timeCreated: 1428020146
+guid: 8d29945ad3cae5f45996fecce72efb7b
+timeCreated: 1428033830
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BC_crouch_attack_sheet_0
-    21300002: BC_crouch_attack_sheet_1
+    21300000: BC_walk_sheet_0
+    21300002: BC_walk_sheet_1
+    21300004: BC_walk_sheet_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,25 +52,35 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BC_crouch_attack_sheet_0
+    - name: BC_walk_sheet_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 3
-        width: 67
-        height: 90
+        x: 7
+        y: 2
+        width: 69
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BC_crouch_attack_sheet_1
+    - name: BC_walk_sheet_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 3
-        width: 76
-        height: 90
+        x: 90
+        y: 2
+        width: 69
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BC_walk_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2
+        width: 69
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
