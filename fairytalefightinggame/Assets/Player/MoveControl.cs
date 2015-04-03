@@ -25,7 +25,7 @@ public class MoveControl : MonoBehaviour {
 
 		body = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-		oldDirection = direction;
+		oldDirection = transform.localScale.x;
 	}
 
 	// Each frame - read controller movement input 
@@ -68,7 +68,7 @@ public class MoveControl : MonoBehaviour {
 		float v_vel = body.velocity.y;
 
 		body.velocity = new Vector2( h_vel, v_vel );
-		anim.SetFloat( "Speed", h_vel );
+		anim.SetFloat( "Speed", Mathf.Abs( h_vel ));
 
 		if (oldDirection != direction && direction != 0){
 			Vector3 tempScale = transform.localScale;
