@@ -68,7 +68,7 @@ public class MoveControl : MonoBehaviour {
 		float v_vel = body.velocity.y;
 
 		body.velocity = new Vector2( h_vel, v_vel );
-		anim.SetFloat( "Speed", h_vel );
+		anim.SetFloat( "Speed", Mathf.Abs( h_vel ) );
 
 		if (oldDirection != direction && direction != 0){
 			Vector3 tempScale = transform.localScale;
@@ -127,8 +127,6 @@ public class MoveControl : MonoBehaviour {
 	void Jump()
 	{
 		anim.SetBool( "Jump", true );
-		Debug.Log (anim.GetBool ("Jump"));
-
 		body.AddForce( new Vector2( 0f, jumpforce ), ForceMode2D.Impulse );
 	}
 
