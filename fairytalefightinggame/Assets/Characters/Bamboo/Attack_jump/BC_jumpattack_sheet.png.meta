@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e4b08283c08995f47ab25ebf179673c6
-timeCreated: 1428034742
+timeCreated: 1428078481
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -56,42 +56,42 @@ TextureImporter:
     - name: BC_jumpattack_sheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 8
-        width: 88
+        x: 0
+        y: 0
+        width: 78
         height: 95
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jumpattack_sheet_1
       rect:
         serializedVersion: 2
-        x: 106
-        y: 8
-        width: 88
+        x: 88
+        y: 0
+        width: 80
         height: 95
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jumpattack_sheet_2
       rect:
         serializedVersion: 2
-        x: 208
-        y: 8
-        width: 88
+        x: 176
+        y: 0
+        width: 79
         height: 95
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jumpattack_sheet_3
       rect:
         serializedVersion: 2
-        x: 310
-        y: 8
+        x: 264
+        y: 0
         width: 88
         height: 95
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

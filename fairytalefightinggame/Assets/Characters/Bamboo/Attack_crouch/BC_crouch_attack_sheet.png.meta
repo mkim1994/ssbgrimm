@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a8c1a9c76d5a0b04d9b56fc937098ba0
-timeCreated: 1428020146
+timeCreated: 1428078451
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,20 +54,20 @@ TextureImporter:
     - name: BC_crouch_attack_sheet_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 3
+        x: 0
+        y: 0
         width: 67
-        height: 90
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_crouch_attack_sheet_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 3
+        x: 76
+        y: 0
         width: 76
-        height: 90
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

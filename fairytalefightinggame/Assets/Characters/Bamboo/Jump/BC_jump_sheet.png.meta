@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9c612f219c617ef4f811726fc326f64d
-timeCreated: 1428033684
+timeCreated: 1428078511
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,51 +58,51 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 78
-        height: 100
+        y: 0
+        width: 69
+        height: 99
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_sheet_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 2
-        width: 78
-        height: 100
+        x: 78
+        y: 0
+        width: 67
+        height: 89
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_sheet_2
       rect:
         serializedVersion: 2
-        x: 172
-        y: 2
-        width: 78
-        height: 100
+        x: 156
+        y: 0
+        width: 69
+        height: 99
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_sheet_3
       rect:
         serializedVersion: 2
-        x: 264
-        y: 2
-        width: 78
-        height: 100
+        x: 234
+        y: 0
+        width: 76
+        height: 98
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_sheet_4
       rect:
         serializedVersion: 2
-        x: 358
-        y: 2
+        x: 312
+        y: 0
         width: 78
-        height: 100
+        height: 95
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

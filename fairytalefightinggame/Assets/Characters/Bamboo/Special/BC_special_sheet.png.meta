@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 22243bf1522e4764a84a26159fca1cb3
-timeCreated: 1428020340
+timeCreated: 1428078524
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,22 +54,22 @@ TextureImporter:
     - name: BC_special_sheet_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 3
-        width: 92
-        height: 104
+        x: 0
+        y: 0
+        width: 67
+        height: 89
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_special_sheet_1
       rect:
         serializedVersion: 2
-        x: 121
-        y: 3
+        x: 92
+        y: 0
         width: 92
-        height: 104
+        height: 103
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
