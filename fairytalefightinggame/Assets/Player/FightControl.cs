@@ -61,7 +61,7 @@ public class FightControl : MonoBehaviour {
 
 	void EndAttack()
 	{
-		anim.SetBool( "Attack", false );
+		//anim.SetBool( "Attack", false );
 	}
 
 	void BeginBlock()
@@ -76,17 +76,17 @@ public class FightControl : MonoBehaviour {
 
 	void BeginSpecial()
 	{
-		anim.SetBool( "Special", true );
+		anim.SetTrigger( "Special");
 	}
 
 	void EndSpecial()
 	{
-		anim.SetBool( "Special", false );
+		//anim.SetBool( "Special", false );
 	}
 
 	void BeginUltimate()
 	{
-		anim.SetBool( "Ultimate", true );
+		anim.SetTrigger( "Ultimate");
 	}
 
 	void EndUltimate()
