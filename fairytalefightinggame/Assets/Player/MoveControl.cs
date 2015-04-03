@@ -19,11 +19,13 @@ public class MoveControl : MonoBehaviour {
 	public float jumpforce;
 	public float speed;
 	public float direction;
+	private float oldDirection;
 
 	void Start() {
 
 		body = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
+		oldDirection = direction;
 	}
 
 	// Each frame - read controller movement input 
@@ -67,6 +69,13 @@ public class MoveControl : MonoBehaviour {
 
 		body.velocity = new Vector2( h_vel, v_vel );
 		anim.SetFloat( "Speed", h_vel );
+
+		if (oldDirection != direction && direction != 0){
+			Vector3 tempScale = transform.localScale;
+			tempScale.x *= -1;
+			transform.localScale = tempScale;
+		}
+		if (direction != 0) {oldDirection = direction;}
 
 		if ( jump )
 		{
@@ -118,6 +127,7 @@ public class MoveControl : MonoBehaviour {
 	void Jump()
 	{
 		anim.SetBool( "Jump", true );
+		Debug.Log (anim.GetBool ("Jump"));
 
 		body.AddForce( new Vector2( 0f, jumpforce ), ForceMode2D.Impulse );
 	}
@@ -131,4 +141,5 @@ public class MoveControl : MonoBehaviour {
 	{
 		anim.SetBool( "Crouch", false );
 	}
+
 }
