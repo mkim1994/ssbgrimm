@@ -7,9 +7,17 @@ public class FightControl : MonoBehaviour {
 	public string BlockButton;
 	public string SpecialButton;
 	public string UltimateButton;
+
+	private Animator anim;
+
+	void Start() 
+	{
+		anim = GetComponent<Animator>();
+	}
 	
 	// Each frame - read input, trigger animation and states
-	void Update () {
+	void Update () 
+	{
 	
 		if ( Input.GetButtonDown( AttackButton ) )
 		{
@@ -46,19 +54,43 @@ public class FightControl : MonoBehaviour {
 
 	}
 
-	void BeginAttack(){}
+	void BeginAttack()
+	{
+		anim.SetBool( "Attack", true );
+	}
 
-	void EndAttack(){}
+	void EndAttack()
+	{
+		anim.SetBool( "Attack", false );
+	}
 
-	void BeginBlock(){}
+	void BeginBlock()
+	{
+		anim.SetBool( "Block", true );
+	}
 
-	void EndBlock(){}
+	void EndBlock()
+	{
+		anim.SetBool( "Block", false );
+	}
 
-	void BeginSpecial(){}
+	void BeginSpecial()
+	{
+		anim.SetBool( "Special", true );
+	}
 
-	void EndSpecial(){}
+	void EndSpecial()
+	{
+		anim.SetBool( "Special", false );
+	}
 
-	void BeginUltimate(){}
+	void BeginUltimate()
+	{
+		anim.SetBool( "Ultimate", true );
+	}
 
-	void EndUltimate(){}
+	void EndUltimate()
+	{
+		anim.SetBool( "Ultimate", false );
+	}
 }

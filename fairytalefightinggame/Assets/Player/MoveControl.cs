@@ -9,6 +9,7 @@ public class MoveControl : MonoBehaviour {
 	private bool grounded = true;
 	private bool ducking = true;
 	private Rigidbody2D body;
+	private Animator anim;
 
 	public string UpButton;
 	public string DownButton;
@@ -22,7 +23,9 @@ public class MoveControl : MonoBehaviour {
 	void Start() {
 
 		body = GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator>();
 
+		Debug.Log( UpButton + LeftButton + DownButton + RightButton );
 	}
 
 	// Each frame - read controller movement input 
@@ -65,6 +68,7 @@ public class MoveControl : MonoBehaviour {
 		float v_vel = body.velocity.y;
 
 		body.velocity = new Vector2( h_vel, v_vel );
+		anim.SetFloat( "Speed", h_vel );
 
 		if ( jump )
 		{
@@ -72,7 +76,6 @@ public class MoveControl : MonoBehaviour {
 			if ( grounded )
 			{
 				jump = false;
-				body.AddForce( new Vector2( 0f, jumpforce ), ForceMode2D.Impulse );
 				Jump();
 			}
 		}
@@ -97,16 +100,17 @@ public class MoveControl : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D collision)
+	void OnCollisionEnter2D( Collision2D collision )
 	{
 		if ( collision.gameObject.tag == "Ground" )
 		{
 			grounded = true;
+			anim.SetBool( "Jump", false );
 		}
 	}
 
 	// TODO - we've been warned this may not work
-	void OnCollisionExit2D(Collision2D collision)
+	void OnCollisionExit2D( Collision2D collision )
 	{
 		if ( collision.gameObject.tag == "Ground" )
 		{
@@ -116,16 +120,18 @@ public class MoveControl : MonoBehaviour {
 
 	void Jump()
 	{
-		// todo - trigger jump animation
+		anim.SetBool( "Jump", true );
+
+		body.AddForce( new Vector2( 0f, jumpforce ), ForceMode2D.Impulse );
 	}
 
 	void Crouch()
 	{
-		// todo - trigger crouch animation
+		anim.SetBool( "Crouch", true );
 	}
 
 	void StandUp()
 	{
-		// todo - transition from crouching to standing
+		anim.SetBool( "Crouch", false );
 	}
 }
