@@ -56,7 +56,7 @@ public class FightControl : MonoBehaviour {
 
 	void BeginAttack()
 	{
-		anim.SetBool( "Attack", true );
+		anim.SetTrigger( "Attack" );
 	}
 
 	void EndAttack()

@@ -127,7 +127,6 @@ public class MoveControl : MonoBehaviour {
 	void Jump()
 	{
 		anim.SetBool( "Jump", true );
-		Debug.Log (anim.GetBool ("Jump"));
 
 		body.AddForce( new Vector2( 0f, jumpforce ), ForceMode2D.Impulse );
 	}
