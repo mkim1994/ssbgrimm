@@ -4,6 +4,7 @@ using System.Collections;
 public class LoadCharacter : MonoBehaviour {
 
 	public GameObject[] prefabs;
+	private GameObject myCharacter;
 
 	public string[] buttons;
 
@@ -14,9 +15,7 @@ public class LoadCharacter : MonoBehaviour {
 		//        see Object.DontDestroyOnLoad()
 
 		// spawn a copy of the prefab for my character
-		GameObject myCharacter = (GameObject)Instantiate( prefabs[0], transform.position, Quaternion.identity );
-		// attach my character to me (it will now have my position)
-		myCharacter.transform.parent = transform;
+		Load( 0 );
 
 		// set up this character to be controlled by me
 
@@ -31,5 +30,15 @@ public class LoadCharacter : MonoBehaviour {
 		fc.AttackButton = buttons[5];
 		fc.SpecialButton = buttons[6];
 		fc.UltimateButton = buttons[7];
+	}
+
+	void Load( int index )
+	{
+		if ( myCharacter )
+		{
+			Destroy( myCharacter );
+		}
+		myCharacter = (GameObject)Instantiate( prefabs[index], transform.position, Quaternion.identity );
+		myCharacter.transform.parent = transform;
 	}
 }

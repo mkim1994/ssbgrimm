@@ -8,7 +8,6 @@ TagManager:
   - Background
   - Hud
   - Ground
-  - Player
   layers:
   - Default
   - TransparentFX
