@@ -14,6 +14,7 @@ GameObject:
   - 61: {fileID: 6130888}
   - 114: {fileID: 11475576}
   - 114: {fileID: 11459870}
+  - 114: {fileID: 11449854}
   m_Layer: 0
   m_Name: BambooCutter
   m_TagString: Player
@@ -78,6 +79,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11449854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b635c31a744df4483e11a50591ce36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack_Idle: {fileID: 8300000, guid: 7c1ccb4bb4a13ee48b8808b0cadb6485, type: 3}
+  attack_Crouch: {fileID: 8300000, guid: a7eb9e51615c37348a693fb45031d900, type: 3}
+  attack_Jump: {fileID: 8300000, guid: 7c1ccb4bb4a13ee48b8808b0cadb6485, type: 3}
+  getHit: {fileID: 8300000, guid: 24a9f135c5db3524aaef7ffe04372337, type: 3}
+  jump: {fileID: 0}
+  special: {fileID: 8300000, guid: e547895193fd3cc4e9eaf3f62350fdc8, type: 3}
+  ultimate: {fileID: 0}
 --- !u!114 &11459870
 MonoBehaviour:
   m_ObjectHideFlags: 1
