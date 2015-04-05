@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 22243bf1522e4764a84a26159fca1cb3
-timeCreated: 1428252341
+guid: 6e58c8d210091ae468e831fc974cb957
+timeCreated: 1428252770
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BC_special_sheet_0
-    21300002: BC_special_sheet_1
+    21300000: BC_GetHit_Sheet_0
+    21300002: BC_GetHit_Sheet_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,23 +51,23 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BC_special_sheet_0
+    - name: BC_GetHit_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 92
-        height: 103
+        width: 75
+        height: 100
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BC_special_sheet_1
+    - name: BC_GetHit_Sheet_1
       rect:
         serializedVersion: 2
-        x: 92
+        x: 150
         y: 0
-        width: 92
-        height: 103
+        width: 75
+        height: 100
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
