@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fcf9f2778b6cb7e42956576c7af26b0d
-timeCreated: 1428078236
+timeCreated: 1428254288
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -56,20 +56,20 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 69
+        width: 75
         height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_crouch_sheet_1
       rect:
         serializedVersion: 2
-        x: 71
+        x: 70
         y: 0
-        width: 67
-        height: 89
+        width: 68
+        height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
