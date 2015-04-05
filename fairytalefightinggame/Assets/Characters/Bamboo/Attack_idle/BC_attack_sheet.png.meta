@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 888234fbf0b6ce445b813f63d2227943
-timeCreated: 1428078468
+timeCreated: 1428254525
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,17 +59,17 @@ TextureImporter:
         width: 79
         height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_attack_sheet_1
       rect:
         serializedVersion: 2
         x: 79
         y: 0
-        width: 69
+        width: 79
         height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

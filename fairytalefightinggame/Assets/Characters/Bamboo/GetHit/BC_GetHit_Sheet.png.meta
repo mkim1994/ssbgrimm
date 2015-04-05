@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6e58c8d210091ae468e831fc974cb957
-timeCreated: 1428252770
+timeCreated: 1428252922
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,12 +54,12 @@ TextureImporter:
     - name: BC_GetHit_Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 75
         y: 0
         width: 75
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_GetHit_Sheet_1
       rect:
