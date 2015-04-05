@@ -50,7 +50,7 @@ public class PlayerHP : MonoBehaviour {
 		}
 	}
 
-	void FlatDamage( float damage )
+	public void FlatDamage( float damage )
 	{
 		health -= damage ;
 
@@ -64,7 +64,7 @@ public class PlayerHP : MonoBehaviour {
 		}
 	}
 
-	void PercentDamage( float damage )
+	public void PercentDamage( float damage )
 	{
 		health -= startingHealth * Mathf.Clamp01( damage );
 
