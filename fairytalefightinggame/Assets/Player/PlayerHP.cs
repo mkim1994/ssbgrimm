@@ -4,29 +4,22 @@ using System.Collections;
 
 public class PlayerHP : MonoBehaviour {
 
-	private static float healthBarDestroyDelay = 0.0f;
+	public static float respawn_delay = 0f;
 
-	public float startingHealth = 100.0f;
-	public uint startingStocks = 2;
-	private float health;
-	private uint stocks;
+	public float startingHealth = 100f;
+	public float health = 100f;
+	public uint stocks = 2;
 
-	public Slider[] healthBars;
+	public Slider hpbar;
 
 	private bool dead = false;
 
 	// Use this for initialization
 	void Start () 
 	{
-		health = startingHealth;
-		stocks = startingStocks;
-
-		foreach ( Slider slider in healthBars )
-		{
-			slider.maxValue = startingHealth;
-			slider.minValue = 0f;
-			slider.value = slider.maxValue;
-		}
+		hpbar.maxValue = startingHealth;
+		hpbar.minValue = 0f;
+		hpbar.value = startingHealth;
 	}
 
 	void Update()
@@ -36,18 +29,10 @@ public class PlayerHP : MonoBehaviour {
 			if ( !dead )
 			{
 				PlayerDying();
-			}
-			else
-			{
-				PlayerDead();
 			}		
 		}
 
-		if ( stocks > 0)
-		{
-			Slider slider = healthBars[stocks-1];
-			slider.value = health;
-		}
+		hpbar.value = health;
 	}
 
 	public void FlatDamage( float damage )
@@ -81,21 +66,27 @@ public class PlayerHP : MonoBehaviour {
 	void PlayerDying()
 	{
 		dead = true;
-
 		stocks--;
-		Destroy( healthBars[stocks], healthBarDestroyDelay );
-		health = startingHealth;
-
 		// start playing a death animation and respawn here
 
 		if ( stocks == 0 )
 		{
-			// trigger the end of the game here
+			// TODO - trigger the end of the game here
+			Debug.Log( "Player Died! Game over!" );
+			Application.LoadLevel( "MainMenu" );
+		}
+		else
+		{
+			Invoke( "PlayerDead", respawn_delay );
 		}
 	}
 
 	void PlayerDead()
 	{
-		// nothing here yet, could do some animation for the other player?
+		health = startingHealth;
+		// respawn the player here
+		// could just be triggering an animation, or spawning a whole new avatar
+		// could be swapping out to a different character for tag team!
+		dead = false;
 	}
 }

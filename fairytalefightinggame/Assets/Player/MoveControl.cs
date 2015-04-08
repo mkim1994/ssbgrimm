@@ -35,13 +35,18 @@ public class MoveControl : MonoBehaviour {
 		{
 			jump = true;
 		}
-		else if ( grounded && Input.GetButtonDown( DownButton ) )
+		else if ( Input.GetButtonDown( DownButton ) )
 		{
 			crouch = true;
 		}
-		else if ( ducking && Input.GetButtonUp( DownButton ) )
+		else if ( Input.GetButtonUp( DownButton ) )
 		{
-			stand = true;
+			crouch = false;
+
+			if ( ducking )
+			{
+				stand = true;
+			}
 		}
 
 		if ( Input.GetButton( RightButton ) )
@@ -83,6 +88,7 @@ public class MoveControl : MonoBehaviour {
 			if ( grounded )
 			{
 				jump = false;
+				crouch = false;
 				Jump();
 			}
 		}

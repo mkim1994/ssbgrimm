@@ -24,7 +24,7 @@ public class AttackHit : MonoBehaviour {
 
 
 			// deal damage to the other player
-			PlayerHP otherHP = other.GetComponent<PlayerHP>();
+			PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
 			if ( isPercent )
 			{
 				otherHP.PercentDamage( damage );

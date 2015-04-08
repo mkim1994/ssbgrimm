@@ -8,6 +8,8 @@ TagManager:
   - Background
   - Hud
   - Ground
+  - HP1
+  - HP2
   layers:
   - Default
   - TransparentFX
