@@ -22,6 +22,6 @@ public class MenuButtons : MonoBehaviour {
 
 	public void QuitGame()
 	{
-		//quit game
+		Application.Quit();
 	}
 }
