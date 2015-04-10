@@ -602,7 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e5e7ff760aff31f47b0db2e4e1267151, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c89b86acbc45de43b3de467f709e94c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 76db5fef661d2934aaa426e501813558, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3774f3e01c576084ba35acf50290d6d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e5e7ff760aff31f47b0db2e4e1267151, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c89b86acbc45de43b3de467f709e94c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 96f22c06fd4d9ef48929d92fb7046b16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d884916ed60a9b34e8ade755ea026ed3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
