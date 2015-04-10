@@ -31,7 +31,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 477432}
   - 61: {fileID: 6173616}
-  - 114: {fileID: 11465192}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -46,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 187.801453, y: 106.929184, z: 0}
+  m_LocalPosition: {x: 307.702667, y: 91.3583374, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children:
   - {fileID: 477432}
@@ -100,7 +99,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 142486}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: .261327207, y: -.380307078}
   serializedVersion: 2
@@ -151,26 +150,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a9edf4111a67419b6b04215ccaf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vertical: 
-  Horizontal: 
+  UpButton: Up1
+  DownButton: Down1
+  RightButton: Right1
+  LeftButton: Left1
   jumpforce: 30000
   speed: 200
   direction: 0
---- !u!114 &11465192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8108dd941729006499f0e7d741ae7df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPercent: 0
-  damage: 25
-  knockbackForce: 2000
-  knockbackDirection: {x: 10, y: 3}
 --- !u!114 &11475576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,10 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6090d5e987df3044add99179c3a6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackButton: 
-  BlockButton: 
-  SpecialButton: 
-  UltimateButton: 
+  AttackButton: Attack1
+  BlockButton: Block1
+  SpecialButton: Special1
+  UltimateButton: Ultimate1
 --- !u!212 &21242252
 SpriteRenderer:
   m_ObjectHideFlags: 1

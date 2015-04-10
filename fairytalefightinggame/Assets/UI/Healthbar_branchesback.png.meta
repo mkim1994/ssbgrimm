@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 2d018e22e2f9b6a49b4314c604744b30
-timeCreated: 1428632296
+guid: d884916ed60a9b34e8ade755ea026ed3
+timeCreated: 1428638674
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: FG_special_sheet_0
-    21300002: FG_special_sheet_1
-    21300004: FG_special_sheet_2
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,15 +29,15 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
-    aniso: 16
+    filterMode: -1
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,37 +48,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: FG_special_sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 198
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FG_special_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 0
-        width: 198
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FG_special_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 0
-        width: 198
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
