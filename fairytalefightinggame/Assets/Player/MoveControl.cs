@@ -4,6 +4,7 @@ using System.Collections;
 public class MoveControl : MonoBehaviour {
 
 	private bool jump = false;
+	private bool jump_button_down = false;
 	private bool crouch = false;
 	private bool stand = false;
 	private bool grounded = true;
@@ -30,22 +31,42 @@ public class MoveControl : MonoBehaviour {
 	// Each frame - read controller movement input 
 	void Update() {
 
-		if ( grounded && !jumping && Input.GetAxis( Vertical ) > 0f )
+		if ( Input.GetAxis( Vertical ) > 0f  )
 		{
-			jump = true;
-		}
-		else if ( !crouch && Input.GetAxis( Vertical ) < 0f )
-		{
-			crouch = true;
-		}
-		else if ( Input.GetAxis( Vertical ) >= 0f )
-		{
-			crouch = false;
+			// start a jump only on the first frame of jump_button_down
+			if ( grounded && !jumping && !jump_button_down )
+			{
+					jump = true;
+			}
+			jump_button_down = true;
 
+			// we can't be crouched while holding up
+			crouch = false;
 			if ( ducking )
 			{
 				stand = true;
+			}							
+		}
+		else 
+		{
+			// this has a slight issue where you can actually double-tap so fast it doesn't register
+			// I doubt the same issue occured with Input.GetButtonUp because it reads OS messages :(
+			jump_button_down = false;
+
+			// holding down means crouch
+			if ( Input.GetAxis( Vertical ) < 0f )
+			{
+				crouch = true;
 			}
+			else // if ( Input.GetAxis( Vertical ) == 0f )
+			{
+				// stop crouching as soon as we let go
+				crouch = false;
+				if ( ducking )
+				{
+					stand = true;
+				}
+			} 
 		}
 
 		float h = Input.GetAxis( Horizontal );
@@ -73,8 +94,6 @@ public class MoveControl : MonoBehaviour {
 
 		if ( jump )
 		{
-			jump = false;
-
 			// check that we're still grounded
 			if ( grounded )
 			{

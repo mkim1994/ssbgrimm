@@ -66,7 +66,8 @@ public class GameMain : MonoBehaviour {
 
 				PlayerHP playerHP = player.playerObject.GetComponent<PlayerHP>();
 				// TODO - make hpbars not suck
-				playerHP.hpbar = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2")).GetComponent<Slider>();				
+				playerHP.hpbar = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2")).GetComponent<Slider>();	
+				playerHP.Init();	
 				
 				CharacterAvatar playerAvatar = player.playerObject.GetComponent<CharacterAvatar>();			
 				playerAvatar.SpawnCharacter( player.characterID );

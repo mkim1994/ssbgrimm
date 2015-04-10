@@ -15,7 +15,7 @@ public class PlayerHP : MonoBehaviour {
 	private bool dead = false;
 
 	// Use this for initialization
-	void Start () 
+	public void Init () 
 	{
 		hpbar.maxValue = startingHealth;
 		hpbar.minValue = 0f;
