@@ -30,6 +30,9 @@ public class GameMain : MonoBehaviour {
 
 		// TODO- MAKE BUTTONS WORK, PUT IN CHAR SELECT
 		//BeginFight();
+		// TODO- Actual char select
+		players[0].characterID = 0;
+		players[1].characterID = 1;
 	}
 
 	void SetRandomBackground()

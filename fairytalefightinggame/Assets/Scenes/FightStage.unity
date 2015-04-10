@@ -267,6 +267,30 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11480986, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+      propertyPath: AttackButton
+      value: Attack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11480986, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+      propertyPath: BlockButton
+      value: Block2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11480986, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+      propertyPath: SpecialButton
+      value: Special2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11480986, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+      propertyPath: UltimateButton
+      value: Ultimate2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491596, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+      propertyPath: Vertical
+      value: Vertical2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491596, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+      propertyPath: Horizontal
+      value: Horizontal2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
   m_IsPrefabParent: 0

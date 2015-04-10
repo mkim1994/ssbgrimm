@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 437830}
   - 61: {fileID: 6113472}
+  - 114: {fileID: 11483594}
   m_Layer: 0
   m_Name: Wand
   m_TagString: Untagged
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 128318}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: .261327207, y: -.380307078}
   serializedVersion: 2
@@ -161,10 +162,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6090d5e987df3044add99179c3a6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackButton: Attack1
-  BlockButton: Block1
-  SpecialButton: Special1
-  UltimateButton: Ultimate1
+  AttackButton: 
+  BlockButton: 
+  SpecialButton: 
+  UltimateButton: 
+--- !u!114 &11483594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8108dd941729006499f0e7d741ae7df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPercent: 0
+  damage: 10
+  knockbackForce: 50000
+  knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11489368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,10 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a9edf4111a67419b6b04215ccaf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpButton: Up1
-  DownButton: Down1
-  RightButton: Right1
-  LeftButton: Left1
+  Vertical: 
+  Horizontal: 
   jumpforce: 30000
   speed: 200
   direction: 0
