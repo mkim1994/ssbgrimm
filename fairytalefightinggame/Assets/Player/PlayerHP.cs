@@ -68,6 +68,7 @@ public class PlayerHP : MonoBehaviour {
 		dead = true;
 		stocks--;
 		// start playing a death animation and respawn here
+		DestroyApple();
 
 		if ( stocks == 0 )
 		{
@@ -88,5 +89,17 @@ public class PlayerHP : MonoBehaviour {
 		// could just be triggering an animation, or spawning a whole new avatar
 		// could be swapping out to a different character for tag team!
 		dead = false;
+	}
+
+	void DestroyApple()
+	{
+		foreach (Transform child in hpbar.transform.parent)
+		{
+			if ( child.tag == "Apple" )
+			{
+				Destroy( child.gameObject );
+				break;
+			}
+		}
 	}
 }

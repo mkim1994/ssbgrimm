@@ -35,7 +35,6 @@ public class AttackHit : MonoBehaviour {
 			{
 				otherHP.FlatDamage( damage );
 			}
-			Debug.Log ( "Damage: " + damage );
 		}
 		//else if ( other.tag == "Attack" )
 		{

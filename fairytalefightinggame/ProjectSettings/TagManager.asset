@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - HP1
   - HP2
+  - Apple
   layers:
   - Default
   - TransparentFX
