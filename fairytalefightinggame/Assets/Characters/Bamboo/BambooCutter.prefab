@@ -45,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 187.801453, y: 106.929184, z: 0}
+  m_LocalPosition: {x: 307.702667, y: 91.3583374, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children:
   - {fileID: 477432}
@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a9edf4111a67419b6b04215ccaf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpButton: 
-  DownButton: 
-  RightButton: 
-  LeftButton: 
+  UpButton: Up1
+  DownButton: Down1
+  RightButton: Right1
+  LeftButton: Left1
   jumpforce: 30000
   speed: 200
   direction: 0
@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6090d5e987df3044add99179c3a6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackButton: 
-  BlockButton: 
-  SpecialButton: 
-  UltimateButton: 
+  AttackButton: Attack1
+  BlockButton: Block1
+  SpecialButton: Special1
+  UltimateButton: Ultimate1
 --- !u!212 &21242252
 SpriteRenderer:
   m_ObjectHideFlags: 1
