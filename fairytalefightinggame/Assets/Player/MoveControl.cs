@@ -7,14 +7,13 @@ public class MoveControl : MonoBehaviour {
 	private bool crouch = false;
 	private bool stand = false;
 	private bool grounded = true;
-	private bool ducking = true;
+	private bool jumping = false;
+	private bool ducking = false;
 	private Rigidbody2D body;
 	private Animator anim;
 
-	public string UpButton;
-	public string DownButton;
-	public string RightButton;
-	public string LeftButton;
+	public string Vertical;
+	public string Horizontal;
 	
 	public float jumpforce;
 	public float speed;
@@ -31,15 +30,15 @@ public class MoveControl : MonoBehaviour {
 	// Each frame - read controller movement input 
 	void Update() {
 
-		if ( grounded && Input.GetButtonDown( UpButton ) )
+		if ( grounded && !jumping && Input.GetAxis( Vertical ) > 0f )
 		{
 			jump = true;
 		}
-		else if ( Input.GetButtonDown( DownButton ) )
+		else if ( !crouch && Input.GetAxis( Vertical ) < 0f )
 		{
 			crouch = true;
 		}
-		else if ( Input.GetButtonUp( DownButton ) )
+		else if ( Input.GetAxis( Vertical ) >= 0f )
 		{
 			crouch = false;
 
@@ -49,18 +48,8 @@ public class MoveControl : MonoBehaviour {
 			}
 		}
 
-		if ( Input.GetButton( RightButton ) )
-		{
-			direction = 1.0f;
-		}
-		else if ( Input.GetButton( LeftButton ) )
-		{
-			direction = -1.0f;
-		}
-		else
-		{
-			direction = 0.0f;
-		}
+		float h = Input.GetAxis( Horizontal );
+		direction = h < 0f ? -1f : h > 0f ? 1f : 0f;
 	}
 
 	// Steady rate - update physics movement
@@ -84,18 +73,24 @@ public class MoveControl : MonoBehaviour {
 
 		if ( jump )
 		{
-			// check that we're still grounded - in case we are launched up
+			jump = false;
+
+			// check that we're still grounded
 			if ( grounded )
 			{
 				jump = false;
 				crouch = false;
+				ducking = false;
+				jumping = true; // we could just set grounded = false here
+				                // but this might cause bugs if we fail to jump
 				Jump();
 			}
 		}
 		else if ( crouch )
 		{
-			// check that we're still grounded - in case we are launched up
-			if ( grounded )
+			// check that we're on the ground
+			// don't let us crouch while jumping before we leave the ground
+			if ( grounded && !jumping )
 			{
 				crouch = false;
 				ducking = true;
@@ -118,6 +113,7 @@ public class MoveControl : MonoBehaviour {
 		if ( collision.gameObject.tag == "Ground" )
 		{
 			grounded = true;
+			jumping = false;
 			anim.SetBool( "Jump", false );
 		}
 	}

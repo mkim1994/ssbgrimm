@@ -29,7 +29,7 @@ public class GameMain : MonoBehaviour {
 		}
 
 		// TODO- MAKE BUTTONS WORK, PUT IN CHAR SELECT
-		BeginFight();
+		//BeginFight();
 	}
 
 	void SetRandomBackground()
