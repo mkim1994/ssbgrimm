@@ -26,10 +26,6 @@ public class CharacterAvatar : MonoBehaviour {
 	// swap to a new character
 	public void SpawnCharacter( int characterID )
 	{
-		if ( myCharacter )
-		{
-			Destroy( myCharacter );
-		}
 		myCharacter = (GameObject)Instantiate( prefabs[characterID], transform.position, Quaternion.identity );
 		myCharacter.transform.parent = transform;
 	}

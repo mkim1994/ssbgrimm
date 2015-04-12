@@ -61,18 +61,23 @@ public class GameMain : MonoBehaviour {
 			// set up the background
 			SetRandomBackground();
 
+			foreach (GameObject chr in GameObject.FindGameObjectsWithTag("Player")){
+				Destroy(chr); //dont duplicate characters
+			}
+
 			// spawn the players; get ready to fight!
 			for ( int i = 0; i < players.Length; i++ )
 			{
 				PlayerInfo player = players[i];
-				player.playerObject = (GameObject)Instantiate( playerPrefab, new Vector3( spawnPoints[i].x , spawnPoints[i].y, 0f ), Quaternion.identity );
+
+				player.playerObject = (GameObject)Instantiate( playerPrefab, new Vector3( spawnPoints[i].x , spawnPoints[i].y, 0f ), Quaternion.identity);
 
 				PlayerHP playerHP = player.playerObject.GetComponent<PlayerHP>();
 				// TODO - make hpbars not suck
 				playerHP.hpbar = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2")).GetComponent<Slider>();	
 				playerHP.Init();	
 				
-				CharacterAvatar playerAvatar = player.playerObject.GetComponent<CharacterAvatar>();			
+				CharacterAvatar playerAvatar = player.playerObject.GetComponent<CharacterAvatar>();	
 				playerAvatar.SpawnCharacter( player.characterID );
 				playerAvatar.InitControls( i );			
 			}
@@ -86,5 +91,4 @@ public class GameMain : MonoBehaviour {
 			// TODO
 		}
 	}
-
 }
