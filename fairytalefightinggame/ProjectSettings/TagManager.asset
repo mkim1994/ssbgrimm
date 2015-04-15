@@ -11,6 +11,7 @@ TagManager:
   - HP1
   - HP2
   - Apple
+  - Avatar
   layers:
   - Default
   - TransparentFX

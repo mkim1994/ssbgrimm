@@ -28,8 +28,6 @@ public class GameMain : MonoBehaviour {
 			players[i] = new PlayerInfo();
 		}
 
-		// TODO- MAKE BUTTONS WORK, PUT IN CHAR SELECT
-		//BeginFight();
 		// TODO- Actual char select
 		players[0].characterID = 0;
 		players[1].characterID = 1;
@@ -43,13 +41,14 @@ public class GameMain : MonoBehaviour {
 	}
 
 	// use this from buttons in the character select scene
-	void SetCharacterForPlayer( int playerID, int characterID )
+	public void SetCharacterForPlayer( int playerID, int characterID )
 	{
 		players[playerID].characterID = characterID;
 	}
 
 	public void BeginFight()
 	{
+		// todo - we should play a countdown here
 		Application.LoadLevel( "FightStage" );
 	}
 
@@ -84,7 +83,7 @@ public class GameMain : MonoBehaviour {
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )
 		{
-			// TODO
+			// todo
 		}
 		else if ( Application.loadedLevelName == "MainMenu" )
 		{

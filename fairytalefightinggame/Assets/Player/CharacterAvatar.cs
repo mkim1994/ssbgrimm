@@ -28,5 +28,10 @@ public class CharacterAvatar : MonoBehaviour {
 	{
 		myCharacter = (GameObject)Instantiate( prefabs[characterID], transform.position, Quaternion.identity );
 		myCharacter.transform.parent = transform;
+
+		foreach ( GameObject avatar in GameObject.FindGameObjectsWithTag("Avatar") )
+		{
+			Physics2D.IgnoreCollision( myCharacter.GetComponent<Collider2D>(), avatar.GetComponent<Collider2D>(), true );
+		}
 	}
 }

@@ -34,7 +34,7 @@ GameObject:
   - 114: {fileID: 11489368}
   m_Layer: 0
   m_Name: Fairy
-  m_TagString: Player
+  m_TagString: Avatar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 455258}
   - 212: {fileID: 21265466}
+  - 114: {fileID: 11427906}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -151,6 +152,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11427906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8108dd941729006499f0e7d741ae7df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPercent: 1
+  damage: 25
+  knockbackForce: 20000
+  knockbackDirection: {x: 0, y: 1}
 --- !u!114 &11480986
 MonoBehaviour:
   m_ObjectHideFlags: 1

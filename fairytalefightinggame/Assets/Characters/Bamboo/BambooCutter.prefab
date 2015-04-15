@@ -17,7 +17,7 @@ GameObject:
   - 114: {fileID: 11449854}
   m_Layer: 0
   m_Name: BambooCutter
-  m_TagString: Player
+  m_TagString: Avatar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 25
-  knockbackForce: 1000
+  knockbackForce: 10000
   knockbackDirection: {x: 10, y: 5}
 --- !u!212 &21242252
 SpriteRenderer:

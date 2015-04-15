@@ -17,7 +17,7 @@ public class AttackHit : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		Debug.Log( "A Hit! A Hit I Say!" );
-		if ( other.tag == "Player" )
+		if ( other.tag == "Avatar" )
 		{
 			// apply knockback
 			Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
