@@ -51,7 +51,7 @@ public class PlayerHP : MonoBehaviour {
 
 	public void PercentDamage( float damage )
 	{
-		health -= startingHealth * Mathf.Clamp01( damage );
+		float loss = startingHealth * Mathf.Clamp01( damage );
 
 		if ( health < 0f )
 		{
