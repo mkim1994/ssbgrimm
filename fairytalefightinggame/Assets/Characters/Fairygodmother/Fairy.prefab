@@ -178,10 +178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6090d5e987df3044add99179c3a6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackButton: 
-  BlockButton: 
-  SpecialButton: 
-  UltimateButton: 
+  AttackButton: Attack1
+  BlockButton: Block1
+  SpecialButton: Special1
+  UltimateButton: Ultimate1
 --- !u!114 &11483594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a9edf4111a67419b6b04215ccaf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vertical: 
-  Horizontal: 
+  Vertical: Vertical1
+  Horizontal: Horizontal1
   jumpforce: 30000
   speed: 200
   direction: 0
