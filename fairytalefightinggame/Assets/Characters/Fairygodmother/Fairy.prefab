@@ -182,6 +182,8 @@ MonoBehaviour:
   BlockButton: Block1
   SpecialButton: Special1
   UltimateButton: Ultimate1
+  bar: {fileID: 21300000, guid: 822d23f97f6c48f4c8c6584473bb6b90, type: 3}
+  sheild: 100
 --- !u!114 &11483594
 MonoBehaviour:
   m_ObjectHideFlags: 1

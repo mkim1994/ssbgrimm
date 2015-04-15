@@ -24,7 +24,8 @@ public class FightControl : MonoBehaviour {
 	{
 		if (anim.GetBool ("Block")) {
 			sheild -= 0.5f;
-			barrier.transform.localScale = new Vector3(sheild/2 + 20f, sheild/2 + 20f, 1f); //resize
+			barrier.transform.localScale = new Vector3(sheild/200 + 0.2f, sheild/200 + 0.2f, 1f); //resize
+			barrier.transform.position = transform.position;
 		}
 		else if (sheild < 100) {
 			sheild += 0.2f; //regen sheild
@@ -89,7 +90,7 @@ public class FightControl : MonoBehaviour {
 			renderer.sprite = bar;
 			renderer.sortingLayerName = "Players"; //put on player layer
 			renderer.sortingOrder = 2; // on top of player
-			barrier.transform.localScale = new Vector3(sheild/2 + 20f, sheild/2 + 20f, 1f);
+			barrier.transform.localScale = new Vector3(sheild/200 + 0.2f, sheild/200 + 0.2f, 1f);
 		}
 	}
 

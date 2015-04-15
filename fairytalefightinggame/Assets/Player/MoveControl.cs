@@ -84,7 +84,6 @@ public class MoveControl : MonoBehaviour {
 		//        maybe set a constant horizontal speed for all chars?
 		float h_vel = direction * speed;
 		float v_vel = body.velocity.y;
-		if (anim.GetBool("Block")){h_vel = 0f;};
 
 		body.velocity = new Vector2( h_vel, v_vel );
 		anim.SetFloat( "Speed", Mathf.Abs( h_vel ));
