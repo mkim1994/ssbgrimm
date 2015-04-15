@@ -60,6 +60,8 @@ public class GameMain : MonoBehaviour {
 			// set up the background
 			SetRandomBackground();
 
+			Debug.Log("SPAWNING");
+
 			foreach (GameObject chr in GameObject.FindGameObjectsWithTag("Player")){
 				Destroy(chr); //dont duplicate characters
 			}

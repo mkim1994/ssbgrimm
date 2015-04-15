@@ -87,8 +87,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 134.63179, y: 149.04863, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437830}
   - {fileID: 455258}
@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Mass: 40
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 150
+  m_GravityScale: 1
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 1
   damage: 25
-  knockbackForce: 20000
+  knockbackForce: 200
   knockbackDirection: {x: 0, y: 1}
 --- !u!114 &11480986
 MonoBehaviour:
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 10
-  knockbackForce: 50000
+  knockbackForce: 50
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11489368
 MonoBehaviour:
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vertical: Vertical1
   Horizontal: Horizontal1
-  jumpforce: 30000
-  speed: 200
+  jumpforce: 100
+  speed: 3
   direction: 0
 --- !u!212 &21233866
 SpriteRenderer:
