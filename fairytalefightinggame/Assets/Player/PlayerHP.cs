@@ -13,6 +13,15 @@ public class PlayerHP : MonoBehaviour {
 	public Slider hpbar;
 
 	private bool dead = false;
+	private FightControl control;
+	private Animator anim;
+
+	void Start()
+	{
+		Transform child = transform.GetChild (0);
+		control = child.GetComponent<FightControl> ();
+		anim = child.GetComponent<Animator> ();
+	}
 
 	// Use this for initialization
 	public void Init () 
@@ -37,7 +46,14 @@ public class PlayerHP : MonoBehaviour {
 
 	public void FlatDamage( float damage )
 	{
-		health -= damage ;
+		if (anim.GetBool ("Block")) {
+			control.sheild -= damage/2;
+			Debug.Log("blocked");
+		}
+		else{
+			health -= damage ;
+			Debug.Log("not blocked");
+		}
 
 		if ( health < 0f )
 		{
@@ -51,7 +67,11 @@ public class PlayerHP : MonoBehaviour {
 
 	public void PercentDamage( float damage )
 	{
-		float loss = startingHealth * Mathf.Clamp01( damage );
+		float loss = startingHealth * Mathf.Clamp01 (damage);
+		if (anim.GetBool ("Block")) {
+			control.sheild -= loss/2;
+		}
+		else {health -= damage;}
 
 		if ( health < 0f )
 		{

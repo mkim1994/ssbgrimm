@@ -8,8 +8,8 @@ public class FightControl : MonoBehaviour {
 	public string SpecialButton;
 	public string UltimateButton;
 	public Sprite bar;
+	public float sheild = 100.0f;
 
-	private float sheild = 100.0f;
 	private GameObject barrier;
 
 	private Animator anim;
