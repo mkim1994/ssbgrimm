@@ -23,6 +23,7 @@ public class AttackHit : MonoBehaviour {
 			Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 			float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
 			otherBody.AddForce( sign * knockbackForce * knockbackDirection, ForceMode2D.Impulse );
+			other.GetComponent<Animator>().SetTrigger("Hit");
 
 
 			// deal damage to the other player
