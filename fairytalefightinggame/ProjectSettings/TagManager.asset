@@ -12,6 +12,8 @@ TagManager:
   - HP2
   - Apple
   - Avatar
+  - Ult1
+  - Ult2
   layers:
   - Default
   - TransparentFX

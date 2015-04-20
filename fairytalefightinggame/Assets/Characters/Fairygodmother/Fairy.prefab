@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11480986}
   - 114: {fileID: 11491596}
   - 114: {fileID: 11489368}
+  - 114: {fileID: 11406344}
   m_Layer: 0
   m_Name: Fairy
   m_TagString: Avatar
@@ -49,13 +50,15 @@ GameObject:
   - 4: {fileID: 455258}
   - 212: {fileID: 21265466}
   - 114: {fileID: 11427906}
+  - 50: {fileID: 5046578}
+  - 61: {fileID: 6158264}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &437830
 Transform:
   m_ObjectHideFlags: 1
@@ -75,7 +78,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .449999988, y: -.379999995, z: 0}
+  m_LocalPosition: {x: .449999988, y: -.317000002, z: 0}
   m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 481004}
@@ -87,13 +90,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.61000001, y: .25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437830}
   - {fileID: 455258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5046578
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176690}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!50 &5094534
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -122,6 +140,19 @@ BoxCollider2D:
   m_Offset: {x: .261327207, y: -.380307078}
   serializedVersion: 2
   m_Size: {x: .160034478, y: .0993943736}
+--- !u!61 &6158264
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176690}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 1.39077497e-06, y: 1.98682145e-07}
+  serializedVersion: 2
+  m_Size: {x: .687093496, y: .712633908}
 --- !u!61 &6175730
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -152,6 +183,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11406344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0e24d489bec984d9cf9ca93dab3610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart: {fileID: 5046578}
 --- !u!114 &11427906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,7 +308,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176690}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
