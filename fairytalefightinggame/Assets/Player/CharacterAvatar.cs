@@ -4,7 +4,7 @@ using System.Collections;
 public class CharacterAvatar : MonoBehaviour {
 
 	public GameObject[] prefabs;
-	private GameObject myCharacter;
+	public GameObject myCharacter;
 
 	private static string[,] buttons = { {"Vertical1", "Horizontal1", "Block1", "Attack1", "Special1", "Ultimate1" },
 	                                     {"Vertical2", "Horizontal2", "Block2", "Attack2", "Special2", "Ultimate2" } };

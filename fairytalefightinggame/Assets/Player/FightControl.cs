@@ -8,15 +8,20 @@ public class FightControl : MonoBehaviour {
 	public string SpecialButton;
 	public string UltimateButton;
 	public Sprite bar;
+	public Animator apple;
 	public float sheild = 100.0f;
 
 	private GameObject barrier;
 
 	private Animator anim;
 
+	private float ultcharge = 0.0f;
+
 	void Start() 
 	{
 		anim = GetComponent<Animator>();
+
+		ultcharge = 0.0f;
 	}
 	
 	// Each frame - read input, trigger animation and states
@@ -77,7 +82,7 @@ public class FightControl : MonoBehaviour {
 
 	void EndAttack()
 	{
-		//anim.SetBool( "Attack", false );
+		anim.SetTrigger("Cancel");
 	}
 
 	void BeginBlock()
@@ -102,21 +107,31 @@ public class FightControl : MonoBehaviour {
 
 	void BeginSpecial()
 	{
-		anim.SetTrigger( "Special");
+		anim.SetTrigger("Special");
 	}
 
 	void EndSpecial()
 	{
-		//anim.SetBool( "Special", false );
+		anim.SetTrigger("Cancel");
 	}
 
 	void BeginUltimate()
 	{
-		anim.SetTrigger( "Ultimate");
+		if ( ultcharge >= 100.0f )
+		{
+			anim.SetTrigger( "Ultimate");
+			ultcharge = 0.0f;
+		}		
 	}
 
 	void EndUltimate()
 	{
-		anim.SetBool( "Ultimate", false );
+	}
+
+	public void ChargeUltimate( float charge )
+	{
+		ultcharge += charge;
+		ultcharge = Mathf.Min( ultcharge, 100.0f );
+		apple.SetFloat("Size", ultcharge ;
 	}
 }

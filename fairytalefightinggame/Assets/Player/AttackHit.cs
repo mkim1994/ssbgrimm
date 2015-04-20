@@ -5,6 +5,10 @@ public class AttackHit : MonoBehaviour {
 
 	public bool isPercent;
 	public float damage;
+	public float ultcharge;
+
+	private Animator anim;
+	private FightControl fc;
 
 	public float knockbackForce;
 	public Vector2 knockbackDirection;
@@ -12,6 +16,9 @@ public class AttackHit : MonoBehaviour {
 	void Start()
 	{
 		knockbackDirection.Normalize();
+
+		anim = GetComponentInParent<Animator>();
+		fc = GetComponentInParent<FightControl>();
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +32,6 @@ public class AttackHit : MonoBehaviour {
 			otherBody.AddForce( sign * knockbackForce * knockbackDirection, ForceMode2D.Impulse );
 			other.GetComponent<Animator>().SetTrigger("Hit");
 
-
 			// deal damage to the other player
 			PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
 			if ( isPercent )
@@ -36,8 +42,10 @@ public class AttackHit : MonoBehaviour {
 			{
 				otherHP.FlatDamage( damage );
 			}
+
+			fc.ChargeUltimate( ultcharge );
 		}
-		//else if ( other.tag == "Attack" )
+		else if ( other.tag == "Attack" )
 		{
 			// here we can cancel attacks if they bounce
 			// actually this won't work, since trigger events are only sent if
@@ -47,6 +55,8 @@ public class AttackHit : MonoBehaviour {
 			// unity forums also says collider will reference the parent when the parent has
 			// a rigidbody attached but the collider doesn't? so maybe it will work but then
 			// we can't distinguish them? correct approach seems to be rigidbodies on all hitboxes
+		
+			myAnim.SetTrigger("Cancel");
 		}
 	}
 }
