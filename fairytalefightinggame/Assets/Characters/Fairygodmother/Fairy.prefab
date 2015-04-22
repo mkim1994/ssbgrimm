@@ -10,9 +10,10 @@ GameObject:
   - 4: {fileID: 437830}
   - 61: {fileID: 6113472}
   - 114: {fileID: 11483594}
+  - 50: {fileID: 5056002}
   m_Layer: 0
   m_Name: Wand
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!50 &5056002
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128318}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!50 &5094534
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -208,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 1
   damage: 25
+  ultcharge: 0
   knockbackForce: 200
   knockbackDirection: {x: 0, y: 1}
 --- !u!114 &11480986
@@ -226,6 +243,7 @@ MonoBehaviour:
   SpecialButton: Special1
   UltimateButton: Ultimate1
   bar: {fileID: 21300000, guid: 822d23f97f6c48f4c8c6584473bb6b90, type: 3}
+  apple: {fileID: 0}
   sheild: 100
 --- !u!114 &11483594
 MonoBehaviour:
@@ -240,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 10
+  ultcharge: 0
   knockbackForce: 50
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11489368

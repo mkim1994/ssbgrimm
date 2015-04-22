@@ -75,15 +75,16 @@ public class GameMain : MonoBehaviour {
 
 				PlayerHP playerHP = player.playerObject.GetComponent<PlayerHP>();
 				// TODO - make hpbars not suck
-				playerHP.hpbar = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2")).GetComponent<Slider>();	
-				playerHP.Init();	
-
-				FightControl fc = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<FightControl>();
-				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" ).GetComponent<Animator>();
+				playerHP.hpbar = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2")).GetComponent<Slider>();		
 				
 				CharacterAvatar playerAvatar = player.playerObject.GetComponent<CharacterAvatar>();	
 				playerAvatar.SpawnCharacter( player.characterID );
-				playerAvatar.InitControls( i );			
+				playerAvatar.InitControls( i );
+
+				FightControl fc = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<FightControl>();
+				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" ).GetComponent<Animator>();
+				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
+				playerHP.Init( anim, fc );			
 			}
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )

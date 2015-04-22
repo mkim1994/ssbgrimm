@@ -18,17 +18,17 @@ public class PlayerHP : MonoBehaviour {
 
 	void Start()
 	{
-		Transform child = transform.GetChild (0);
-		control = child.GetComponent<FightControl> ();
-		anim = child.GetComponent<Animator> ();
 	}
 
 	// Use this for initialization
-	public void Init () 
+	public void Init ( Animator animator, FightControl fightcontrol ) 
 	{
 		hpbar.maxValue = startingHealth;
 		hpbar.minValue = 0f;
 		hpbar.value = startingHealth;
+
+		control = fightcontrol;
+		anim = animator;
 	}
 
 	void Update()

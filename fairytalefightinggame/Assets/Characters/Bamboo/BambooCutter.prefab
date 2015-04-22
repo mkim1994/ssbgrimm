@@ -34,7 +34,7 @@ GameObject:
   - 114: {fileID: 11488960}
   m_Layer: 0
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   SpecialButton: Special1
   UltimateButton: Ultimate1
   bar: {fileID: 21300000, guid: 822d23f97f6c48f4c8c6584473bb6b90, type: 3}
+  apple: {fileID: 0}
   sheild: 100
 --- !u!114 &11488960
 MonoBehaviour:
@@ -186,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 25
+  ultcharge: 0
   knockbackForce: 1000
   knockbackDirection: {x: 10, y: 5}
 --- !u!212 &21242252

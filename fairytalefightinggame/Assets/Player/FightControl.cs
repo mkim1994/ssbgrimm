@@ -82,7 +82,7 @@ public class FightControl : MonoBehaviour {
 
 	void EndAttack()
 	{
-		anim.SetTrigger("Cancel");
+		//anim.SetTrigger("Cancel");
 	}
 
 	void BeginBlock()
@@ -112,7 +112,7 @@ public class FightControl : MonoBehaviour {
 
 	void EndSpecial()
 	{
-		anim.SetTrigger("Cancel");
+		//anim.SetTrigger("Cancel");
 	}
 
 	void BeginUltimate()
@@ -132,6 +132,6 @@ public class FightControl : MonoBehaviour {
 	{
 		ultcharge += charge;
 		ultcharge = Mathf.Min( ultcharge, 100.0f );
-		apple.SetFloat("Size", ultcharge ;
+		apple.SetFloat("Size", ultcharge);
 	}
 }

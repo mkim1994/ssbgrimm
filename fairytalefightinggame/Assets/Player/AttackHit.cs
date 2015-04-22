@@ -55,8 +55,8 @@ public class AttackHit : MonoBehaviour {
 			// unity forums also says collider will reference the parent when the parent has
 			// a rigidbody attached but the collider doesn't? so maybe it will work but then
 			// we can't distinguish them? correct approach seems to be rigidbodies on all hitboxes
-		
-			myAnim.SetTrigger("Cancel");
+			Debug.Log("Clang!");
+			anim.SetTrigger("Cancel");
 		}
 	}
 }
