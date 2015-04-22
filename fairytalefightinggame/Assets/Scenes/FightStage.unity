@@ -524,7 +524,7 @@ GameObject:
   - 68: {fileID: 944140539}
   m_Layer: 0
   m_Name: Right Wall
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,7 +536,7 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 944140538}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: aa8a6ff5d977cea45a95f6063b8872ca, type: 2}
+  m_Material: {fileID: 6200000, guid: 47b04f7fa180c3144821648202244a32, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
@@ -1092,7 +1092,7 @@ GameObject:
   - 68: {fileID: 1618803226}
   m_Layer: 0
   m_Name: Ceiling
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1116,7 +1116,7 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1618803224}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: aa8a6ff5d977cea45a95f6063b8872ca, type: 2}
+  m_Material: {fileID: 6200000, guid: 47b04f7fa180c3144821648202244a32, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
@@ -1210,7 +1210,7 @@ GameObject:
   - 68: {fileID: 1825135758}
   m_Layer: 0
   m_Name: Left Wall
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,7 +1222,7 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825135757}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: aa8a6ff5d977cea45a95f6063b8872ca, type: 2}
+  m_Material: {fileID: 6200000, guid: 47b04f7fa180c3144821648202244a32, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
