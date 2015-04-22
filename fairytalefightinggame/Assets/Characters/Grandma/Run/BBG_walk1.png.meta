@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 97710175ba7326b41ba4d84922242edc
-timeCreated: 1429714246
+timeCreated: 1429717029
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,22 +54,22 @@ TextureImporter:
     - name: BBG_walk1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 70
         y: 0
-        width: 400
+        width: 330
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_walk1_1
       rect:
         serializedVersion: 2
-        x: 400
+        x: 470
         y: 0
-        width: 400
+        width: 330
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
