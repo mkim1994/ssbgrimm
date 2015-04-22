@@ -14,6 +14,7 @@ public class GameMain : MonoBehaviour {
 	private PlayerInfo[] players;
 	public int numplayers = 2;
 	public Texture2D[] backgrounds;
+	private int randomBG = 0;
 	public Vector2[] spawnPoints;
 	public GameObject playerPrefab;
 
@@ -33,13 +34,6 @@ public class GameMain : MonoBehaviour {
 		players[1].characterID = 1;
 	}
 
-	void SetRandomBackground()
-	{
-		GameObject background = GameObject.FindWithTag( "Background" );
-		RawImage image = background.GetComponent<RawImage>();
-		image.texture = backgrounds[(int)(Random.value * backgrounds.Length)];
-	}
-
 	// use this from buttons in the character select scene
 	public void SetCharacterForPlayer( int playerID, int characterID )
 	{
@@ -57,8 +51,9 @@ public class GameMain : MonoBehaviour {
 		// the fight stage - we just called BeginFight()
 		if ( Application.loadedLevelName == "FightStage" )
 		{
-			// set up the background
-			SetRandomBackground();
+			// display the previously selected background
+			RawImage bg = GameObject.FindWithTag("Background").GetComponent<RawImage>();
+			bg.texture = backgrounds[randomBG];
 
 			Debug.Log("SPAWNING");
 
@@ -89,7 +84,11 @@ public class GameMain : MonoBehaviour {
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )
 		{
-			// todo
+			// choose a random background image
+			randomBG = (int)(Random.value * backgrounds.Length);
+			// display the background in character select
+			RawImage bg = GameObject.FindWithTag("Menu").GetComponent<RawImage>();
+			bg.texture = backgrounds[randomBG];
 		}
 		else if ( Application.loadedLevelName == "MainMenu" )
 		{
