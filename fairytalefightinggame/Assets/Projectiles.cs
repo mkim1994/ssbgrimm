@@ -5,15 +5,17 @@ public class Projectiles : MonoBehaviour {
 
 	public Rigidbody2D heart;
 	private GameObject clone;
+	private string special;
 
 	// Use this for initialization
 	void Start () {
-	
+		FightControl f = GetComponent<FightControl> ();
+		special = f.SpecialButton;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Y)) {
+		if (Input.GetButtonDown (special)) {
 			Invoke("Fire", 0.25f);
 		}
 	}

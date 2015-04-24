@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &118020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 452692}
+  - 61: {fileID: 6184034}
+  - 114: {fileID: 11404038}
+  - 50: {fileID: 5063526}
+  m_Layer: 0
+  m_Name: CrouchWand
+  m_TagString: Attack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &128318
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +30,7 @@ GameObject:
   - 114: {fileID: 11483594}
   - 50: {fileID: 5056002}
   m_Layer: 0
-  m_Name: Wand
+  m_Name: JumpWand
   m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,11 +73,29 @@ GameObject:
   - 61: {fileID: 6158264}
   m_Layer: 0
   m_Name: Heart
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &198098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 487480}
+  - 61: {fileID: 6148844}
+  - 114: {fileID: 11413132}
+  - 50: {fileID: 5010442}
+  m_Layer: 0
+  m_Name: IdleWand
+  m_TagString: Attack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &437830
 Transform:
   m_ObjectHideFlags: 1
@@ -71,7 +107,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 481004}
-  m_RootOrder: 0
+  m_RootOrder: 2
+--- !u!4 &452692
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 481004}
+  m_RootOrder: 1
 --- !u!4 &455258
 Transform:
   m_ObjectHideFlags: 1
@@ -83,7 +131,7 @@ Transform:
   m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 481004}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &481004
 Transform:
   m_ObjectHideFlags: 1
@@ -94,10 +142,39 @@ Transform:
   m_LocalPosition: {x: 1.61000001, y: .25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 487480}
+  - {fileID: 452692}
   - {fileID: 437830}
   - {fileID: 455258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &487480
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 481004}
+  m_RootOrder: 0
+--- !u!50 &5010442
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198098}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!50 &5046578
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -119,6 +196,21 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128318}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!50 &5063526
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118020}
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
@@ -156,6 +248,19 @@ BoxCollider2D:
   m_Offset: {x: .261327207, y: -.380307078}
   serializedVersion: 2
   m_Size: {x: .160034478, y: .0993943736}
+--- !u!61 &6148844
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198098}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .261327207, y: -.380307078}
+  serializedVersion: 2
+  m_Size: {x: .160034478, y: .0993943736}
 --- !u!61 &6158264
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -182,6 +287,19 @@ BoxCollider2D:
   m_Offset: {x: -.239258423, y: -.139576182}
   serializedVersion: 2
   m_Size: {x: .998517752, y: 1.39437771}
+--- !u!61 &6184034
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118020}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .261327207, y: -.380307078}
+  serializedVersion: 2
+  m_Size: {x: .160034478, y: .0993943736}
 --- !u!95 &9530744
 Animator:
   serializedVersion: 3
@@ -199,6 +317,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11404038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8108dd941729006499f0e7d741ae7df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPercent: 0
+  damage: 10
+  ultcharge: 0
+  knockbackForce: 50
+  knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11406344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,6 +345,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heart: {fileID: 5046578}
+--- !u!114 &11413132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8108dd941729006499f0e7d741ae7df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPercent: 0
+  damage: 10
+  ultcharge: 0
+  knockbackForce: 50
+  knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11427906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vertical: Vertical1
   Horizontal: Horizontal1
-  jumpforce: 100
+  jumpforce: 250
   speed: 3
   direction: 0
 --- !u!212 &21233866

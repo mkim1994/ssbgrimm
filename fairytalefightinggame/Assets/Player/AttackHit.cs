@@ -43,7 +43,10 @@ public class AttackHit : MonoBehaviour {
 				otherHP.FlatDamage( damage );
 			}
 
-			fc.ChargeUltimate( ultcharge );
+			if(ultcharge != 0.0f)
+			{
+				fc.ChargeUltimate( ultcharge );
+			}
 		}
 		else if ( other.tag == "Attack" )
 		{
