@@ -18,20 +18,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - time: .0833333358
-      value: {fileID: 21300002, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - time: .166666672
-      value: {fileID: 21300004, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - time: .25
-      value: {fileID: 21300006, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - time: .333333343
-      value: {fileID: 21300008, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
+      value: {fileID: 21300000, guid: 4e159a0ea7a8c2f45bd776b5445b97ff, type: 3}
+    - time: .0166666675
+      value: {fileID: 21300010, guid: 4e159a0ea7a8c2f45bd776b5445b97ff, type: 3}
+    - time: .100000001
+      value: {fileID: 21300012, guid: 4e159a0ea7a8c2f45bd776b5445b97ff, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -45,15 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - {fileID: 21300002, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - {fileID: 21300004, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - {fileID: 21300006, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
-    - {fileID: 21300008, guid: 9c612f219c617ef4f811726fc326f64d, type: 3}
+    - {fileID: 21300000, guid: 4e159a0ea7a8c2f45bd776b5445b97ff, type: 3}
+    - {fileID: 21300010, guid: 4e159a0ea7a8c2f45bd776b5445b97ff, type: 3}
+    - {fileID: 21300012, guid: 4e159a0ea7a8c2f45bd776b5445b97ff, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .416666687
+    m_StopTime: .116666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -73,7 +67,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: .0833333358
+  - time: .0166666675
     functionName: Play_Jump
     data: 
     objectReferenceParameter: {fileID: 0}

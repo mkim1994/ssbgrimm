@@ -10,6 +10,7 @@ public class AppleScale : MonoBehaviour {
 	{
 		anim = GetComponent<Animator>();
 		baseScale = transform.localScale;
+        transform.localScale = new Vector3( 0.0f, 0.0f, baseScale.z );
 	}
 
 	public void ApplyScale()
