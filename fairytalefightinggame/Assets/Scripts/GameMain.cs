@@ -22,16 +22,6 @@ public class GameMain : MonoBehaviour {
 	{
 		// this should live until we quit the game
 		DontDestroyOnLoad(transform.gameObject);
-
-		players = new PlayerInfo[numplayers];
-		for ( int i = 0; i < numplayers; i++ )
-		{
-			players[i] = new PlayerInfo();
-		}
-
-		// TODO- Actual char select
-		players[0].characterID = 0;
-		players[1].characterID = 1;
 	}
 
 	// use this from buttons in the character select scene
@@ -100,6 +90,12 @@ public class GameMain : MonoBehaviour {
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )
 		{
+			players = new PlayerInfo[numplayers];
+			for ( int i = 0; i < numplayers; i++ )
+			{
+				players[i] = new PlayerInfo();
+			}
+			
 			// choose a random background image
 			randomBG = (int)(Random.value * backgrounds.Length);
 			// display the background in character select
@@ -108,7 +104,7 @@ public class GameMain : MonoBehaviour {
 		}
 		else if ( Application.loadedLevelName == "MainMenu" )
 		{
-			// TODO
+			
 		}
 	}
 }
