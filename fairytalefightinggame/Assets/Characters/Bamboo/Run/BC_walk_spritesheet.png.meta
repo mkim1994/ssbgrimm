@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ab1361f347edc954daf3d95134340f4a
-timeCreated: 1429844680
+timeCreated: 1429868362
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,8 +60,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_walk_spritesheet_1
       rect:
@@ -70,8 +70,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_walk_spritesheet_2
       rect:
@@ -80,8 +80,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_walk_spritesheet_3
       rect:
@@ -90,8 +90,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

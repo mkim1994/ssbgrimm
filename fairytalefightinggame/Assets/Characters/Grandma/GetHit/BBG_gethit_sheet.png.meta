@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0dae66548f51d934098a2cc01ac4e144
-timeCreated: 1429854056
+timeCreated: 1429867859
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,8 +58,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_gethit_sheet_1
       rect:
@@ -68,8 +68,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

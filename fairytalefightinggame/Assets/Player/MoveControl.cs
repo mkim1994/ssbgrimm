@@ -23,7 +23,7 @@ public class MoveControl : MonoBehaviour {
 
 	void Start() {
 
-		if (transform.position.x > 350) { //if you spawn on the right side of the map flip transform (dumb fix but whatevs)
+		if (transform.position.x > 1) { //if you spawn on the right side of the map flip transform (dumb fix but whatevs)
 			gameObject.transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, 1f);
 		}
 		body = GetComponent<Rigidbody2D>();

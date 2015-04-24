@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6c75d0b074547214a86f0c3a2336728d
-timeCreated: 1429844828
+timeCreated: 1429868222
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,8 +61,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_attack_spritesheet_1
       rect:
@@ -71,8 +71,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_attack_spritesheet_2
       rect:
@@ -81,8 +81,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_attack_spritesheet_3
       rect:
@@ -91,8 +91,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_attack_spritesheet_4
       rect:
@@ -101,8 +101,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

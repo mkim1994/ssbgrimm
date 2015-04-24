@@ -226,10 +226,10 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159456}
-  m_Mass: 40
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -329,9 +329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 10
+  damage: 20
   ultcharge: 0
-  knockbackForce: 50
+  knockbackForce: 100
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11406344
 MonoBehaviour:
@@ -357,9 +357,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 10
+  damage: 20
   ultcharge: 0
-  knockbackForce: 50
+  knockbackForce: 100
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11427906
 MonoBehaviour:
@@ -373,9 +373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 1
-  damage: 25
+  damage: 10
   ultcharge: 0
-  knockbackForce: 200
+  knockbackForce: 20
   knockbackDirection: {x: 0, y: 1}
 --- !u!114 &11480986
 MonoBehaviour:
@@ -407,9 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 10
+  damage: 20
   ultcharge: 0
-  knockbackForce: 50
+  knockbackForce: 100
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11489368
 MonoBehaviour:

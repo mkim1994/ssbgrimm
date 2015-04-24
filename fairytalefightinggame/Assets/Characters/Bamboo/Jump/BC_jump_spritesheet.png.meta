@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4e159a0ea7a8c2f45bd776b5445b97ff
-timeCreated: 1429844492
+timeCreated: 1429868332
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -67,8 +67,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_1
       rect:
@@ -77,8 +77,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_2
       rect:
@@ -87,8 +87,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_3
       rect:
@@ -97,8 +97,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_4
       rect:
@@ -107,8 +107,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_5
       rect:
@@ -117,8 +117,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_6
       rect:
@@ -127,8 +127,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_7
       rect:
@@ -137,8 +137,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_8
       rect:
@@ -147,8 +147,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_9
       rect:
@@ -157,8 +157,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_jump_spritesheet_10
       rect:
@@ -167,8 +167,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6377191617387914db57ede73b89d47d
-timeCreated: 1429852975
+timeCreated: 1429867969
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,8 +61,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_jump_sheet_1
       rect:
@@ -71,8 +71,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_jump_sheet_2
       rect:
@@ -81,8 +81,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_jump_sheet_3
       rect:
@@ -91,8 +91,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_jump_sheet_4
       rect:
@@ -101,8 +101,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

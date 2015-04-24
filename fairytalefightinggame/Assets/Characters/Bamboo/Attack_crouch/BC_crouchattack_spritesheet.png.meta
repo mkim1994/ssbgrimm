@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7df05090938894844b07e04498809c1f
-timeCreated: 1429845297
+timeCreated: 1429868191
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,8 +60,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_crouchattack_spritesheet_1
       rect:
@@ -70,8 +70,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_crouchattack_spritesheet_2
       rect:
@@ -80,8 +80,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_crouchattack_spritesheet_3
       rect:
@@ -90,8 +90,8 @@ TextureImporter:
         y: 0
         width: 162
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

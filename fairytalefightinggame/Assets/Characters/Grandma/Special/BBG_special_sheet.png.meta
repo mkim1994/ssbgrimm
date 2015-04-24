@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3f7559f103fc6dd40a16831e84f80079
-timeCreated: 1429853593
+timeCreated: 1429867999
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,8 +59,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_special_sheet_1
       rect:
@@ -69,8 +69,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_special_sheet_2
       rect:
@@ -79,8 +79,8 @@ TextureImporter:
         y: 0
         width: 500
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
