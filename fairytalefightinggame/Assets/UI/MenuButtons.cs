@@ -12,6 +12,8 @@ public class MenuButtons : MonoBehaviour {
 	{
 		// todo - figure out world camera, pan to page with controls
 		// easy out - load another level for controls
+		Application.LoadLevel ("ControlScene");
+	
 	}
 
 	public void ShowCredits()
