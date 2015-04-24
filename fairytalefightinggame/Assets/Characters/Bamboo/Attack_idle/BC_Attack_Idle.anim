@@ -44,13 +44,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -.0296700597
-        inSlope: 6.37293768
-        outSlope: 6.37293768
+        inSlope: 15.3728018
+        outSlope: 15.3728018
         tangentMode: 10
       - time: .0500000007
-        value: .288976818
-        inSlope: 6.37293768
-        outSlope: 6.37293768
+        value: .738970041
+        inSlope: 15.3728018
+        outSlope: 15.3728018
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -92,13 +92,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .0620750189
-        inSlope: 12.7458754
-        outSlope: 12.7458754
+        inSlope: 10.5123253
+        outSlope: 10.5123253
         tangentMode: 10
       - time: .0500000007
-        value: .699368775
-        inSlope: 12.7458754
-        outSlope: 12.7458754
+        value: .587691307
+        inSlope: 10.5123253
+        outSlope: 10.5123253
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -247,13 +247,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -.0296700597
-        inSlope: 6.37293768
-        outSlope: 6.37293768
+        inSlope: 15.3728018
+        outSlope: 15.3728018
         tangentMode: 10
       - time: .0500000007
-        value: .288976818
-        inSlope: 6.37293768
-        outSlope: 6.37293768
+        value: .738970041
+        inSlope: 15.3728018
+        outSlope: 15.3728018
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -295,13 +295,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .0620750189
-        inSlope: 12.7458754
-        outSlope: 12.7458754
+        inSlope: 10.5123253
+        outSlope: 10.5123253
         tangentMode: 10
       - time: .0500000007
-        value: .699368775
-        inSlope: 12.7458754
-        outSlope: 12.7458754
+        value: .587691307
+        inSlope: 10.5123253
+        outSlope: 10.5123253
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
