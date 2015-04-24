@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 165ad8825f9ce1a46a0064e8cd0d8f78
-timeCreated: 1429714223
+timeCreated: 1429852507
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,7 +58,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 350
+        width: 500
         height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -66,9 +66,9 @@ TextureImporter:
     - name: BBG_idle_sheet_1
       rect:
         serializedVersion: 2
-        x: 350
+        x: 500
         y: 0
-        width: 350
+        width: 500
         height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -76,9 +76,9 @@ TextureImporter:
     - name: BBG_idle_sheet_2
       rect:
         serializedVersion: 2
-        x: 700
+        x: 1000
         y: 0
-        width: 350
+        width: 500
         height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -86,9 +86,9 @@ TextureImporter:
     - name: BBG_idle_sheet_3
       rect:
         serializedVersion: 2
-        x: 1050
+        x: 1500
         y: 0
-        width: 350
+        width: 500
         height: 254
       alignment: 0
       pivot: {x: 0, y: 0}

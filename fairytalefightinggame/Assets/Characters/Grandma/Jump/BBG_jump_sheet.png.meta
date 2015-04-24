@@ -1,12 +1,14 @@
 fileFormatVersion: 2
-guid: 3f7559f103fc6dd40a16831e84f80079
-timeCreated: 1429853593
+guid: 6377191617387914db57ede73b89d47d
+timeCreated: 1429852975
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BBG_special_sheet_0
-    21300002: BBG_special_sheet_1
-    21300004: BBG_special_sheet_2
+    21300000: BBG_jump_sheet_0
+    21300002: BBG_jump_sheet_1
+    21300004: BBG_jump_sheet_2
+    21300006: BBG_jump_sheet_3
+    21300008: BBG_jump_sheet_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,7 +54,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BBG_special_sheet_0
+    - name: BBG_jump_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -62,7 +64,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BBG_special_sheet_1
+    - name: BBG_jump_sheet_1
       rect:
         serializedVersion: 2
         x: 500
@@ -72,10 +74,30 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BBG_special_sheet_2
+    - name: BBG_jump_sheet_2
       rect:
         serializedVersion: 2
         x: 1000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_jump_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_jump_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2000
         y: 0
         width: 500
         height: 254
