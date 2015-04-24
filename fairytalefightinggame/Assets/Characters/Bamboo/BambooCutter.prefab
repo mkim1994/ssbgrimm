@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 25
-  ultcharge: 0
+  ultcharge: 34
   knockbackForce: 1000
   knockbackDirection: {x: 10, y: 5}
 --- !u!212 &21242252

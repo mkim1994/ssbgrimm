@@ -70,14 +70,29 @@ public class GameMain : MonoBehaviour {
 
 				PlayerHP playerHP = player.playerObject.GetComponent<PlayerHP>();
 				// TODO - make hpbars not suck
-				playerHP.hpbar = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2")).GetComponent<Slider>();		
+				GameObject hud = ((i == 0) ? GameObject.FindWithTag("HP1") : GameObject.FindWithTag("HP2"));
+				playerHP.hpbar = hud.GetComponent<Slider>();
+				playerHP.gems = new RawImage[2];
+
+				foreach ( Transform child in hud.transform.parent )
+				{
+					if ( child.gameObject.tag == "Gem1" )
+					{
+						playerHP.gems[0] = child.gameObject.GetComponent<RawImage>();
+					}
+					else if ( child.gameObject.tag == "Gem2" )
+					{
+						playerHP.gems[1] = child.gameObject.GetComponent<RawImage>();
+					}
+
+				}		
 				
 				CharacterAvatar playerAvatar = player.playerObject.GetComponent<CharacterAvatar>();	
 				playerAvatar.SpawnCharacter( player.characterID );
 				playerAvatar.InitControls( i );
 
 				FightControl fc = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<FightControl>();
-				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" ).GetComponent<Animator>();
+				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" );
 				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
 				playerHP.Init( anim, fc );			
 			}

@@ -43,6 +43,8 @@ MonoBehaviour:
   prefabs:
   - {fileID: 132800, guid: 95eef30ed2541e541b57dc116289f48a, type: 2}
   - {fileID: 159456, guid: 70cf6faef31b1294d99bec81b41da731, type: 2}
+  - {fileID: 159456, guid: 66e209c3633beeb4ebadf73543395f09, type: 2}
+  myCharacter: {fileID: 0}
 --- !u!114 &11414006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,7 +59,9 @@ MonoBehaviour:
   startingHealth: 100
   health: 100
   stocks: 2
+  gems: []
   hpbar: {fileID: 0}
+  empty_stock: {fileID: 2800000, guid: 288f73e7713f17749942d074ede0073f, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

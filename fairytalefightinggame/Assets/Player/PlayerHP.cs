@@ -10,7 +10,9 @@ public class PlayerHP : MonoBehaviour {
 	public float health = 100f;
 	public uint stocks = 2;
 
+	public RawImage[] gems;
 	public Slider hpbar;
+	public Texture empty_stock;
 
 	private bool dead = false;
 	private FightControl control;
@@ -85,10 +87,11 @@ public class PlayerHP : MonoBehaviour {
 
 	void PlayerDying()
 	{
+		Debug.Log("Dying");
 		dead = true;
 		stocks--;
 		// start playing a death animation and respawn here
-		DestroyApple();
+		DestroyGem();
 
 		if ( stocks == 0 )
 		{
@@ -111,15 +114,8 @@ public class PlayerHP : MonoBehaviour {
 		dead = false;
 	}
 
-	void DestroyApple()
+	void DestroyGem()
 	{
-		foreach (Transform child in hpbar.transform.parent)
-		{
-			if ( child.tag == "Apple" )
-			{
-				Destroy( child.gameObject );
-				break;
-			}
-		}
+		gems[stocks].texture = empty_stock;
 	}
 }

@@ -8,7 +8,7 @@ public class FightControl : MonoBehaviour {
 	public string SpecialButton;
 	public string UltimateButton;
 	public Sprite bar;
-	public Animator apple;
+	public GameObject apple;
 	public float sheild = 100.0f;
 
 	private GameObject barrier;
@@ -121,7 +121,14 @@ public class FightControl : MonoBehaviour {
 		{
 			anim.SetTrigger( "Ultimate");
 			ultcharge = 0.0f;
+			apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
+			Invoke( "ResetUltimate", 0.5f );
 		}		
+	}
+
+	void ResetUltimate()
+	{
+		apple.transform.localScale = new Vector3( ultcharge / 100.0f, ultcharge / 100.0f, 1.0f );
 	}
 
 	void EndUltimate()
@@ -132,6 +139,7 @@ public class FightControl : MonoBehaviour {
 	{
 		ultcharge += charge;
 		ultcharge = Mathf.Min( ultcharge, 100.0f );
-		apple.SetFloat("Size", ultcharge);
+		apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
+		apple.transform.localScale = new Vector3( ultcharge / 100.0f, ultcharge / 100.0f, 1.0f );
 	}
 }
