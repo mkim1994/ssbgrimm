@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AppleScale : MonoBehaviour {
 
-	private Vector3 baseScale;
+	public Vector3 baseScale = new Vector3( 1.0f, 1.0f, 1.0f );
 	private Animator anim;
 
 	void Start()
@@ -16,7 +16,11 @@ public class AppleScale : MonoBehaviour {
 	public void ApplyScale()
 	{
 		float size = anim.GetFloat("Size");
-		Debug.Log( "AppleSize" + size );
 		transform.localScale = new Vector3( baseScale.x * (size / 100.0f), baseScale.y * (size / 100.0f), baseScale.z );
+	}
+
+	public Vector3 GetScale()
+	{
+		return baseScale;
 	}
 }

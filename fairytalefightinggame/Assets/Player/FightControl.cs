@@ -9,19 +9,19 @@ public class FightControl : MonoBehaviour {
 	public string UltimateButton;
 	public Sprite bar;
 	public GameObject apple;
+	private Vector3 baseScale;
 	public float sheild = 100.0f;
 
 	private GameObject barrier;
 
 	private Animator anim;
 
-	private float ultcharge = 0.0f;
+	private float ultcharge = 0.0000001f;
 
 	void Start() 
 	{
 		anim = GetComponent<Animator>();
-
-		ultcharge = 0.0f;
+		ultcharge = 0.0000001f;
 	}
 	
 	// Each frame - read input, trigger animation and states
@@ -122,13 +122,18 @@ public class FightControl : MonoBehaviour {
 			anim.SetTrigger( "Ultimate");
 			ultcharge = 0.0f;
 			apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
-			Invoke( "ResetUltimate", 0.5f );
 		}		
 	}
 
-	void ResetUltimate()
+	public void InitUltimate()
 	{
-		apple.transform.localScale = new Vector3( ultcharge / 100.0f, ultcharge / 100.0f, 1.0f );
+		baseScale = apple.transform.localScale;
+		apple.transform.localScale = new Vector3( 0.0f, 0.0f, 1.0f );
+	}
+
+	public void ResetUltimate()
+	{
+		apple.transform.localScale = new Vector3( baseScale.x * ultcharge / 100.0f, baseScale.y * ultcharge / 100.0f, 1.0f );
 	}
 
 	void EndUltimate()
@@ -140,6 +145,6 @@ public class FightControl : MonoBehaviour {
 		ultcharge += charge;
 		ultcharge = Mathf.Min( ultcharge, 100.0f );
 		apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
-		apple.transform.localScale = new Vector3( ultcharge / 100.0f, ultcharge / 100.0f, 1.0f );
+		ResetUltimate();
 	}
 }

@@ -93,6 +93,7 @@ public class GameMain : MonoBehaviour {
 
 				FightControl fc = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<FightControl>();
 				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" );
+				fc.InitUltimate();
 				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
 				playerHP.Init( anim, fc );			
 			}
