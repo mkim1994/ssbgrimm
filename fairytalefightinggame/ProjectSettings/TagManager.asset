@@ -17,6 +17,8 @@ TagManager:
   - Attack
   - Gem1
   - Gem2
+  - Player1Ult
+  - Player2Ult
   layers:
   - Default
   - TransparentFX

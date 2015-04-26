@@ -126,7 +126,10 @@ public class FightControl : MonoBehaviour {
 			ultcharge = 0.0f;
 			apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
 			if (anim.name == "Fairy(Clone)"){ //if fairy is casting it
-				gameObject.GetComponent<Projectiles>().Invoke("Ult",1f); //create polymorph projectile
+				gameObject.GetComponent<Projectiles>().Invoke("FGUlt",1f); //create polymorph projectile
+			}
+			else if (anim.name == "BambooCutter(Clone)"){ //if fairy is casting it
+				gameObject.GetComponent<Projectiles>().Invoke("BCUlt",1f); //create polymorph projectile
 			}
 		}		
 	}

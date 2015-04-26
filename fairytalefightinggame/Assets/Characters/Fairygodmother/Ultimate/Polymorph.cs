@@ -26,14 +26,19 @@ public class Polymorph : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.tag == "Avatar") {
-			GameObject player = other.gameObject;
-			player.GetComponent<FightControl>().enabled = false;
-			player.GetComponent<MoveControl>().enabled = false;
-			player.GetComponent<Animator>().enabled = false;
-			player.GetComponent<SpriteRenderer>().sprite = pumpkin;
-			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0.5f,0f);
-			polyPlayer = player;
-			Invoke("unPoly", 0.5f);
+			string charNum = other.gameObject.GetComponent<FightControl> ().AttackButton;
+			charNum = (charNum [charNum.Length - 1]).ToString(); //extract last char (player number)
+			charNum = "Player" + charNum + "Ult";
+			if (charNum != gameObject.tag) {
+				GameObject player = other.gameObject;
+				player.GetComponent<FightControl>().enabled = false;
+				player.GetComponent<MoveControl>().enabled = false;
+				player.GetComponent<Animator>().enabled = false;
+				player.GetComponent<SpriteRenderer>().sprite = pumpkin;
+				player.GetComponent<Rigidbody2D>().velocity = new Vector2(0.5f,0f);
+				polyPlayer = player;
+				Invoke("unPoly", 0.5f);
+			}
 			//Destroy(gameObject);
 		}
 	}
