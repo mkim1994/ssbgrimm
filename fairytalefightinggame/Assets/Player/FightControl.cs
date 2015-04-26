@@ -108,6 +108,9 @@ public class FightControl : MonoBehaviour {
 	void BeginSpecial()
 	{
 		anim.SetTrigger("Special");
+		if (anim.name == "Fairy(Clone)") { //if fairy is casting it
+			gameObject.GetComponent<Projectiles> ().Invoke ("Fire", 0.5f);
+		}
 	}
 
 	void EndSpecial()
@@ -122,6 +125,9 @@ public class FightControl : MonoBehaviour {
 			anim.SetTrigger( "Ultimate");
 			ultcharge = 0.0f;
 			apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
+			if (anim.name == "Fairy(Clone)"){ //if fairy is casting it
+				gameObject.GetComponent<Projectiles>().Invoke("Ult",1f); //create polymorph projectile
+			}
 		}		
 	}
 

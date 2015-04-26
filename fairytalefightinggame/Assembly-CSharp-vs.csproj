@@ -47,13 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharSelectButtons.cs" />
+     <Compile Include="Assets\Characters\Bamboo\Ultimate\BambooUlt.cs" />
+     <Compile Include="Assets\Characters\Fairygodmother\Ultimate\Polymorph.cs" />
      <Compile Include="Assets\Player\AttackHit.cs" />
      <Compile Include="Assets\Player\CharacterAvatar.cs" />
      <Compile Include="Assets\Player\FightControl.cs" />
      <Compile Include="Assets\Player\MoveControl.cs" />
      <Compile Include="Assets\Player\PlayerHP.cs" />
      <Compile Include="Assets\Player\SoundController.cs" />
+     <Compile Include="Assets\Projectiles.cs" />
      <Compile Include="Assets\Scripts\GameMain.cs" />
+     <Compile Include="Assets\UI\AppleScale.cs" />
      <Compile Include="Assets\UI\MenuButtons.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files 2/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

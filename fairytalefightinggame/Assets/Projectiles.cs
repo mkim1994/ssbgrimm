@@ -4,20 +4,16 @@ using System.Collections;
 public class Projectiles : MonoBehaviour {
 
 	public Rigidbody2D heart;
+	public Rigidbody2D ultHeart;
 	private GameObject clone;
 	private string special;
+	private string ultimate;
 
 	// Use this for initialization
 	void Start () {
 		FightControl f = GetComponent<FightControl> ();
 		special = f.SpecialButton;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetButtonDown (special)) {
-			Invoke("Fire", 0.25f);
-		}
+		ultimate = f.UltimateButton;
 	}
 
 	void Fire() {
@@ -30,5 +26,16 @@ public class Projectiles : MonoBehaviour {
 		clone.SetActive(true);
 		g.velocity = transform.TransformDirection(new Vector3 (5 * transform.localScale.x, 0, 0));
 		Destroy (clone, 1.5f);
+	}
+	void Ult() {
+		Rigidbody2D h = Instantiate (ultHeart,
+		                             transform.position + (new Vector3 (0.45f * transform.localScale.x,
+		                                   -0.317f,
+		                                   0f)),
+		                             transform.rotation) as Rigidbody2D;
+		clone = h.gameObject;
+		clone.SetActive(true);
+		h.velocity = transform.TransformDirection(new Vector3 (8 * transform.localScale.x, 0, 0));
+		Destroy (clone, 10.0f);
 	}
 }
