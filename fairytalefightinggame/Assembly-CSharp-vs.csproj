@@ -55,8 +55,8 @@
      <Compile Include="Assets\Player\MoveControl.cs" />
      <Compile Include="Assets\Player\PlayerHP.cs" />
      <Compile Include="Assets\Player\SoundController.cs" />
-     <Compile Include="Assets\Projectiles.cs" />
      <Compile Include="Assets\Scripts\GameMain.cs" />
+     <Compile Include="Assets\Scripts\Projectiles.cs" />
      <Compile Include="Assets\UI\AppleScale.cs" />
      <Compile Include="Assets\UI\MenuButtons.cs" />
  <Reference Include="UnityEngine.UI">

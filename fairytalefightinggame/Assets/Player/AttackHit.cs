@@ -26,28 +26,33 @@ public class AttackHit : MonoBehaviour {
 		Debug.Log( "A Hit! A Hit I Say!" );
 		if ( other.tag == "Avatar" )
 		{
-			// apply knockback
-			Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
-			float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
-			Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
-			otherBody.AddForce( knockback, ForceMode2D.Impulse );
-			other.transform.gameObject.GetComponent<Animator>().SetTrigger("Hit");
+			string charNum = other.gameObject.GetComponent<FightControl> ().AttackButton;
+			charNum = (charNum [charNum.Length - 1]).ToString(); //extract last char (player number)
+			charNum = "Player" + charNum + "Ult";
 
+			if (charNum != gameObject.transform.parent.gameObject.tag){ //doesnt hit self (for BC ult)
+				// apply knockback
+				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
+				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
+				Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
+				otherBody.AddForce( knockback, ForceMode2D.Impulse );
+				other.GetComponent<Animator>().SetTrigger("Hit");
 
-			// deal damage to the other player
-			PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
-			if ( isPercent )
-			{
-				otherHP.PercentDamage( damage );
-			}
-			else
-			{
-				otherHP.FlatDamage( damage );
-			}
+				// deal damage to the other player
+				PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
+				if ( isPercent )
+				{
+					otherHP.PercentDamage( damage );
+				}
+				else
+				{
+					otherHP.FlatDamage( damage );
+				}
 
-			if(ultcharge != 0.0f)
-			{
-				fc.ChargeUltimate( ultcharge );
+				if(ultcharge != 0.0f)
+				{
+					fc.ChargeUltimate( ultcharge );
+				}
 			}
 		}
 		else if ( other.tag == "Attack" )

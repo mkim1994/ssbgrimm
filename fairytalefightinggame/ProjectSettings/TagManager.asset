@@ -18,6 +18,8 @@ TagManager:
   - Gem1
   - Gem2
   - CharacterSelect
+  - Player1Ult
+  - Player2Ult
   layers:
   - Default
   - TransparentFX
