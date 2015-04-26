@@ -29,9 +29,9 @@ public class AttackHit : MonoBehaviour {
 			// apply knockback
 			Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 			float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
-			knockbackDirection = new Vector2(knockbackDirection.x * sign, knockbackDirection.y); //flip only x direction
-			otherBody.AddForce( knockbackForce * knockbackDirection, ForceMode2D.Impulse );
-			other.GetComponent<Animator>().SetTrigger("Hit");
+			Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
+			otherBody.AddForce( knockback, ForceMode2D.Impulse );
+			other.transform.gameObject.GetComponent<Animator>().SetTrigger("Hit");
 
 
 			// deal damage to the other player

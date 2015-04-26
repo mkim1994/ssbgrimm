@@ -15,12 +15,13 @@ public class CharSelectButtons : MonoBehaviour {
 	
 	public void Select( int id )
 	{
-		main.SetCharacterForPlayer( playerID, id );
+		GameObject.FindWithTag("GameController").GetComponent<GameMain>().SetCharacterForPlayer( playerID, id );
 		playerID++;
 
 		if ( playerID >= main.numplayers )
 		{
-			main.BeginFight();
+			playerID = 0;
+			GameObject.FindWithTag("GameController").GetComponent<GameMain>().BeginFight();
 		}
 		else
 		{

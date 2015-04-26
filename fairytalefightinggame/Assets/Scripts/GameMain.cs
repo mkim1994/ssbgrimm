@@ -11,7 +11,7 @@ public class GameMain : MonoBehaviour {
 
 	}
 
-	private PlayerInfo[] players = new PlayerInfo[2];
+	private PlayerInfo[] players = null;
 	public int numplayers = 2;
 	public Texture2D[] backgrounds;
 	private int randomBG = 0;
@@ -19,6 +19,7 @@ public class GameMain : MonoBehaviour {
 	public GameObject playerPrefab;
 
     private bool musicPlaying = false;
+    private bool shouldDestroy = false;
 
     private void StartMusic()
     {
@@ -31,7 +32,7 @@ public class GameMain : MonoBehaviour {
 
 	void Start()
 	{
-		// this should live until we quit the game
+		// this should live until we quit the game, or go back to main menu
 		DontDestroyOnLoad(transform.gameObject);
         StartMusic();
 	}
@@ -39,11 +40,6 @@ public class GameMain : MonoBehaviour {
 	// use this from buttons in the character select scene
 	public void SetCharacterForPlayer( int playerID, int characterID )
 	{
-        if ( playerID == 0 )
-        {
-            players = new PlayerInfo[numplayers];
-        }
-        players[playerID] = new PlayerInfo();
 		players[playerID].characterID = characterID;
 	}
 
@@ -104,18 +100,31 @@ public class GameMain : MonoBehaviour {
 				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
 				playerHP.Init( anim, fc );			
 			}
+
+			shouldDestroy = true;
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )
-		{			
+		{		
 			// choose a random background image
 			randomBG = (int)(Random.value * backgrounds.Length);
 			// display the background in character select
 			RawImage bg = GameObject.FindWithTag("Menu").GetComponent<RawImage>();
 			bg.texture = backgrounds[randomBG];
+
+			// set up character select
+			if (players == null)
+			{
+				players = new PlayerInfo[numplayers];
+				for ( int i = 0; i < numplayers; i++ )
+				{
+					players[i] = new PlayerInfo();
+				}
+			}		
 		}
 		else if ( Application.loadedLevelName == "MainMenu" )
 		{
-			StartMusic();
+			if ( shouldDestroy )
+				GameObject.Destroy(this.transform.gameObject);
 		}
 	}
 }
