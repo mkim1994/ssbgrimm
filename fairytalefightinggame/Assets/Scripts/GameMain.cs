@@ -11,22 +11,39 @@ public class GameMain : MonoBehaviour {
 
 	}
 
-	private PlayerInfo[] players;
+	private PlayerInfo[] players = new PlayerInfo[2];
 	public int numplayers = 2;
 	public Texture2D[] backgrounds;
 	private int randomBG = 0;
 	public Vector2[] spawnPoints;
 	public GameObject playerPrefab;
 
+    private bool musicPlaying = false;
+
+    private void StartMusic()
+    {
+        if ( !musicPlaying )
+        {
+            GetComponent<AudioSource>().Play();
+            musicPlaying = true;
+        }
+    }
+
 	void Start()
 	{
 		// this should live until we quit the game
 		DontDestroyOnLoad(transform.gameObject);
+        StartMusic();
 	}
 
 	// use this from buttons in the character select scene
 	public void SetCharacterForPlayer( int playerID, int characterID )
 	{
+        if ( playerID == 0 )
+        {
+            players = new PlayerInfo[numplayers];
+        }
+        players[playerID] = new PlayerInfo();
 		players[playerID].characterID = characterID;
 	}
 
@@ -89,13 +106,7 @@ public class GameMain : MonoBehaviour {
 			}
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )
-		{
-			players = new PlayerInfo[numplayers];
-			for ( int i = 0; i < numplayers; i++ )
-			{
-				players[i] = new PlayerInfo();
-			}
-			
+		{			
 			// choose a random background image
 			randomBG = (int)(Random.value * backgrounds.Length);
 			// display the background in character select
@@ -104,7 +115,7 @@ public class GameMain : MonoBehaviour {
 		}
 		else if ( Application.loadedLevelName == "MainMenu" )
 		{
-			
+			StartMusic();
 		}
 	}
 }

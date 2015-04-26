@@ -437,53 +437,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &591478407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 591478409}
-  - 114: {fileID: 591478408}
-  m_Layer: 0
-  m_Name: GameController
-  m_TagString: GameController
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &591478408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 591478407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27c694fb3b8036e4dad47ed356cac4c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numplayers: 2
-  backgrounds:
-  - {fileID: 2800000, guid: 57e7a683de903e946be28ca027b97fbc, type: 3}
-  - {fileID: 2800000, guid: d370502c8ce4f0045abbb7486d9e4c93, type: 3}
-  spawnPoints:
-  - {x: -4, y: -1}
-  - {x: 4, y: -1}
-  playerPrefab: {fileID: 168548, guid: 48faf6c3bf796164bb43fbd573e4e3be, type: 2}
---- !u!4 &591478409
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 591478407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &1115127732
 GameObject:
   m_ObjectHideFlags: 0
