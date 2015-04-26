@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 25
+  damage: 10
   ultcharge: 0
-  knockbackForce: 600
+  knockbackForce: 300
   knockbackDirection: {x: 0, y: 5}
 --- !u!114 &11418562
 MonoBehaviour:

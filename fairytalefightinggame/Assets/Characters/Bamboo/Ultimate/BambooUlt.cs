@@ -11,7 +11,7 @@ public class BambooUlt : MonoBehaviour {
 	}
 	
 	void Go () {
-		int force = Random.Range(4500, 5500);
+		int force = Random.Range(3500, 4500);
 		Rigidbody2D body = gameObject.GetComponent<Rigidbody2D> ();
 		body.WakeUp ();
 		body.AddForce(new Vector2(0f,force));
