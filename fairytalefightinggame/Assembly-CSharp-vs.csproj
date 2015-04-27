@@ -49,6 +49,7 @@
      <Compile Include="Assets\CharSelectButtons.cs" />
      <Compile Include="Assets\Characters\Bamboo\Ultimate\BambooUlt.cs" />
      <Compile Include="Assets\Characters\Fairygodmother\Ultimate\Polymorph.cs" />
+     <Compile Include="Assets\Characters\Grandma\Ultimate\WolfUlt.cs" />
      <Compile Include="Assets\Player\AttackHit.cs" />
      <Compile Include="Assets\Player\CharacterAvatar.cs" />
      <Compile Include="Assets\Player\FightControl.cs" />

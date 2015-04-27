@@ -69,6 +69,7 @@ GameObject:
   - 114: {fileID: 11480986}
   - 114: {fileID: 11491596}
   - 114: {fileID: 11489368}
+  - 114: {fileID: 11488978}
   m_Layer: 0
   m_Name: Grandma
   m_TagString: Avatar
@@ -328,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 20
-  ultcharge: 0
+  ultcharge: 20
   knockbackForce: 50
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11464656
@@ -344,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 0
   damage: 25
-  ultcharge: 0
+  ultcharge: 10
   knockbackForce: 50
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11471584
@@ -359,8 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 20
-  ultcharge: 0
+  damage: 10
+  ultcharge: 30
   knockbackForce: 50
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11480986
@@ -397,6 +398,18 @@ MonoBehaviour:
   ultcharge: 0
   knockbackForce: 1
   knockbackDirection: {x: 10, y: 100}
+--- !u!114 &11488978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc31582cfedd2584696e2f4a030de371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dammage: 50
 --- !u!114 &11489368
 MonoBehaviour:
   m_ObjectHideFlags: 1

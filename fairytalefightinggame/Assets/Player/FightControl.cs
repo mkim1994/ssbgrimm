@@ -128,8 +128,11 @@ public class FightControl : MonoBehaviour {
 			if (anim.name == "Fairy(Clone)"){ //if fairy is casting it
 				gameObject.GetComponent<Projectiles>().Invoke("FGUlt",1f); //create polymorph projectile
 			}
-			else if (anim.name == "BambooCutter(Clone)"){ //if fairy is casting it
-				gameObject.GetComponent<Projectiles>().Invoke("BCUlt",1f); //create polymorph projectile
+			else if (anim.name == "BambooCutter(Clone)"){ //if bamboocutter is casting it
+				gameObject.GetComponent<Projectiles>().Invoke("BCUlt",1f); //create bamboo projectiles
+			}
+			else if (anim.name == "Grandma(Clone)"){ //if grandma is casting it
+				gameObject.GetComponent<WolfUlt>().Invoke("BBGUlt",1f); //cast ult
 			}
 		}		
 	}
