@@ -30,6 +30,7 @@ GameObject:
   - 50: {fileID: 5025934}
   - 114: {fileID: 11442760}
   - 58: {fileID: 5861998}
+  - 95: {fileID: 9532140}
   m_Layer: 0
   m_Name: Ult
   m_TagString: Attack
@@ -71,6 +72,7 @@ GameObject:
   - 114: {fileID: 11491596}
   - 114: {fileID: 11489368}
   - 114: {fileID: 11406344}
+  - 82: {fileID: 8282322}
   m_Layer: 0
   m_Name: Fairy
   m_TagString: Avatar
@@ -360,6 +362,75 @@ BoxCollider2D:
   m_Offset: {x: .261327207, y: -.380307078}
   serializedVersion: 2
   m_Size: {x: .160034478, y: .0993943736}
+--- !u!82 &8282322
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159456}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0f2bc39736de48e4ba9bb73412306d09, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9530744
 Animator:
   serializedVersion: 3
@@ -372,6 +443,23 @@ Animator:
   m_Controller: {fileID: 9100000, guid: fc2f8d85ed96ed14ab626f2726830e25, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9532140
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6372d48311c524429c9f08e270217a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -406,6 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: {fileID: 5046578}
   ultHeart: {fileID: 5025934}
+  bambooos: {fileID: 0}
 --- !u!114 &11413132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc85a51fe1137b4c88c26bda9f801f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpkin: {fileID: 21300000, guid: 3c89b86acbc45de43b3de467f709e94c, type: 3}
+  pumpkin: {fileID: 21300000, guid: 7f1a320155d768749b935dfbfc88a796, type: 3}
 --- !u!114 &11480986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -594,7 +683,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -568800779
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29bb883aa608f604db8b0fb985fd39e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e56eab53a15944b4abf773a74116bd22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

@@ -40,8 +40,8 @@ public class Projectiles : MonoBehaviour {
 		tg = "Player" + tg + "Ult";
 		clone.tag = tg;
 		clone.SetActive(true);
-		h.velocity = transform.TransformDirection(new Vector3 (10 * transform.localScale.x, 0, 0));
-		Destroy (clone, 10.0f);
+		h.velocity = transform.TransformDirection(new Vector3 (3.5f * transform.localScale.x, 0, 0));
+		Destroy (clone, 15.0f);
 	}
 	void BCUlt() {
 		GameObject clone = Instantiate (bambooos);
