@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CharSelectButtons : MonoBehaviour {
 
+	public Sprite[] indicators;
+
 	public GameMain main = null;
+	private Image indicatorPlayer = null;
 
 	private int playerID = 0;
 
 	// Use this for initialization
 	void Start () {
 		main = GameObject.FindWithTag("GameController").GetComponent<GameMain>();
+		indicatorPlayer = GameObject.FindWithTag("CharacterSelect").GetComponent<Image>();
+		indicatorPlayer.sprite = indicators[0];
 	}
 	
 	public void Select( int id )
@@ -25,6 +31,7 @@ public class CharSelectButtons : MonoBehaviour {
 		}
 		else
 		{
+			indicatorPlayer.sprite = indicators[playerID];
 			SwitchController();
 		}
 	}

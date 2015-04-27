@@ -4,6 +4,8 @@ using System.Collections;
 
 public class PlayerHP : MonoBehaviour {
 
+	public int playerID;
+
 	public static float respawn_delay = 0f;
 
 	public float startingHealth = 100f;
@@ -95,9 +97,8 @@ public class PlayerHP : MonoBehaviour {
 
 		if ( stocks == 0 )
 		{
-			// TODO - trigger the end of the game here
 			Debug.Log( "Player Died! Game over!" );
-			Application.LoadLevel( "MainMenu" );
+			GameObject.FindWithTag("GameController").GetComponent<GameMain>().GameOver( playerID );
 		}
 		else
 		{

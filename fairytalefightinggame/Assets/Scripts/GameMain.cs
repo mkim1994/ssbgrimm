@@ -19,7 +19,12 @@ public class GameMain : MonoBehaviour {
 	public GameObject playerPrefab;
 
     private bool musicPlaying = false;
-    private bool shouldDestroy = false;
+    public bool shouldDestroy = false;
+
+    public Sprite[] countdownSprites;
+    public Sprite[] victorySprites;
+    private Image overlay;
+    private GoBack goback = null;
 
     private void StartMusic()
     {
@@ -35,6 +40,9 @@ public class GameMain : MonoBehaviour {
 		// this should live until we quit the game, or go back to main menu
 		DontDestroyOnLoad(transform.gameObject);
         StartMusic();
+        overlay = GetComponent<Image>();
+        overlay.enabled = false;
+        goback = GetComponent<GoBack>();
 	}
 
 	// use this from buttons in the character select scene
@@ -43,10 +51,28 @@ public class GameMain : MonoBehaviour {
 		players[playerID].characterID = characterID;
 	}
 
+	private IEnumerator Countdown()
+	{
+		overlay.enabled = true;
+		Debug.Log("3");
+		overlay.sprite = countdownSprites[3];
+		yield return new WaitForSeconds(1);
+		Debug.Log("2");
+		overlay.sprite = countdownSprites[2];
+		yield return new WaitForSeconds(1);
+		Debug.Log("1");
+		overlay.sprite = countdownSprites[1];
+		yield return new WaitForSeconds(1);
+		Debug.Log("FIGHT!");
+		overlay.sprite = countdownSprites[0];
+		yield return new WaitForSeconds(1);
+		overlay.enabled = false;
+		Application.LoadLevel( "FightStage" );
+	}
+
 	public void BeginFight()
 	{
-		// todo - we should play a countdown here
-		Application.LoadLevel( "FightStage" );
+		StartCoroutine("Countdown");
 	}
 
 	void OnLevelWasLoaded( int level )
@@ -54,6 +80,9 @@ public class GameMain : MonoBehaviour {
 		// the fight stage - we just called BeginFight()
 		if ( Application.loadedLevelName == "FightStage" )
 		{
+			goback.enabled = false;
+			overlay.sprite = null;
+
 			// display the previously selected background
 			RawImage bg = GameObject.FindWithTag("Background").GetComponent<RawImage>();
 			bg.texture = backgrounds[randomBG];
@@ -98,18 +127,22 @@ public class GameMain : MonoBehaviour {
 				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" );
 				fc.InitUltimate();
 				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
-				playerHP.Init( anim, fc );			
+				playerHP.Init( anim, fc );	
+				playerHP.playerID = i;		
 			}
 
 			shouldDestroy = true;
 		}
 		else if ( Application.loadedLevelName == "CharacterSelect" )
-		{		
+		{	
+			goback.enabled = true;
+			overlay.enabled = false;
+
 			// choose a random background image
 			randomBG = (int)(Random.value * backgrounds.Length);
 			// display the background in character select
-			RawImage bg = GameObject.FindWithTag("Menu").GetComponent<RawImage>();
-			bg.texture = backgrounds[randomBG];
+			//RawImage bg = GameObject.FindWithTag("Menu").GetComponent<RawImage>();
+			//bg.texture = backgrounds[randomBG];
 
 			// set up character select
 			if (players == null)
@@ -123,8 +156,39 @@ public class GameMain : MonoBehaviour {
 		}
 		else if ( Application.loadedLevelName == "MainMenu" )
 		{
+			if ( goback ) goback.enabled = true;
 			if ( shouldDestroy )
 				GameObject.Destroy(this.transform.gameObject);
 		}
+	}
+
+	public void GameOver( int loserID )
+	{
+		for ( int i = 0; i < numplayers; i++ )
+		{
+			GameObject avatar = players[i].playerObject.GetComponent<CharacterAvatar>().myCharacter;
+			avatar.GetComponent<FightControl>().enabled = false;
+
+			if ( i == loserID )
+			{
+				// play loser animation? character should be dead
+			}
+			else
+			{
+				// the last winner wins. lol
+				overlay.sprite = victorySprites[i];
+				avatar.GetComponent<Animator>().SetTrigger("Winner");
+			}
+		}
+		// display winner icon
+		overlay.enabled = true;
+		goback.enabled = true;
+
+		Invoke("Restart", 6);
+	}
+
+	private void Restart()
+	{
+		Application.LoadLevel("CharacterSelect");
 	}
 }
