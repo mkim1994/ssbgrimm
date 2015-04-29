@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 74aa24f0fdb254149960bee07409fc3d
-timeCreated: 1428506343
+timeCreated: 1430146366
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,8 +8,6 @@ TextureImporter:
     21300002: FG_idle_sheet_1
     21300004: FG_idle_sheet_2
     21300006: FG_idle_sheet_3
-    21300008: FG_idle_sheet_4
-    21300010: FG_idle_sheet_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -89,26 +87,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 594
-        y: 0
-        width: 198
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FG_idle_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 792
-        y: 0
-        width: 198
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FG_idle_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 990
         y: 0
         width: 198
         height: 190

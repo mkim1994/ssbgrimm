@@ -7,8 +7,9 @@ public class AttackHit : MonoBehaviour {
 	public float damage;
 	public float ultcharge;
 
-	private Animator anim;
-	private FightControl fc;
+	public Animator anim;
+	public FightControl fc;
+	public Collider2D parent;
 
 	public float knockbackForce;
 	public Vector2 knockbackDirection;
@@ -17,12 +18,24 @@ public class AttackHit : MonoBehaviour {
 	{
 		knockbackDirection.Normalize();
 
+		//This is a projectile that has its info created in Projectiles.cs
+		if (this.gameObject.transform.parent == null)
+			return;
+
 		anim = GetComponentInParent<Animator>();
 		fc = GetComponentInParent<FightControl>();
+		Transform po = this.gameObject.transform.parent;
+		parent = po.gameObject.GetComponent<Collider2D> ();
+		Debug.Log (parent);
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (other == parent) {
+			Debug.Log ("Stop hitting yourself!");
+			return;
+		}
+		//Debug.Log (other.name);
 		Debug.Log( "A Hit! A Hit I Say!" );
 		if ( other.tag == "Avatar" )
 		{
@@ -30,7 +43,6 @@ public class AttackHit : MonoBehaviour {
 			charNum = (charNum [charNum.Length - 1]).ToString(); //extract last char (player number)
 			charNum = "Player" + charNum + "Ult";
 
-			if (charNum != gameObject.transform.parent.gameObject.tag){ //doesnt hit self (for BC ult)
 				// apply knockback
 				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
@@ -53,7 +65,6 @@ public class AttackHit : MonoBehaviour {
 				{
 					fc.ChargeUltimate( ultcharge );
 				}
-			}
 		}
 		else if ( other.tag == "Attack" )
 		{
@@ -67,6 +78,10 @@ public class AttackHit : MonoBehaviour {
 			// we can't distinguish them? correct approach seems to be rigidbodies on all hitboxes
 			Debug.Log("Clang!");
 			anim.SetTrigger("Cancel");
+		}
+		if (this.gameObject.name == "Heart(Clone)") {
+			Debug.Log ("Projectile out");
+			Destroy (this.gameObject);
 		}
 	}
 }
