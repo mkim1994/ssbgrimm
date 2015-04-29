@@ -1,13 +1,21 @@
 fileFormatVersion: 2
 guid: 515201bed2fcbb5498cbd9415ed98b3a
-timeCreated: 1430256694
+timeCreated: 1430350287
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: FG_lose_sheet_loop_0
+    21300002: FG_lose_sheet_loop_1
+    21300004: FG_lose_sheet_loop_2
+    21300006: FG_lose_sheet_loop_3
+    21300008: FG_lose_sheet_loop_4
+    21300010: FG_lose_sheet_loop_5
+    21300012: FG_lose_sheet_loop_6
+    21300014: FG_lose_sheet_loop_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -29,15 +37,15 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +56,87 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: FG_lose_sheet_loop_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 128
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_2
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 131
+        width: 15
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_3
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 132
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 19
+        width: 125
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_5
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 20
+        width: 125
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_6
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 21
+        width: 125
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FG_lose_sheet_loop_7
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 20
+        width: 125
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -22,6 +22,7 @@ public class GameMain : MonoBehaviour {
     public bool shouldDestroy = false;
 
     public Sprite[] countdownSprites;
+    public Sprite koSprite;
     public Sprite[] victorySprites;
     private Image overlay;
     private GoBack goback = null;
@@ -68,6 +69,28 @@ public class GameMain : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 		overlay.enabled = false;
 		Application.LoadLevel( "FightStage" );
+	}
+
+	public void DisplayKO( int deadID )
+	{
+		overlay.sprite = koSprite;
+		overlay.enabled = true;
+
+		int killerID = deadID == 0 ? 1 : 0;
+
+		GameObject killer = players[killerID].playerObject.GetComponent<CharacterAvatar>().myCharacter;
+		killer.GetComponent<Animator>().SetBool("Winner", true);
+		FightControl disabled = killer.GetComponent<FightControl>();
+		disabled.enabled = false;
+		StartCoroutine(ClearSprite(disabled));
+	}
+
+	private IEnumerator ClearSprite( FightControl toEnable )
+	{
+		yield return new WaitForSeconds(3); // MUST MATCH RESPAWN DELAY
+		overlay.enabled = false;
+		toEnable.gameObject.GetComponent<Animator>().SetBool("Winner", false);
+		toEnable.enabled = true;
 	}
 
 	public void BeginFight()
@@ -171,13 +194,15 @@ public class GameMain : MonoBehaviour {
 
 			if ( i == loserID )
 			{
-				// play loser animation? character should be dead
+				// loser is already in the 'dead' animation state, set by playerHP
 			}
 			else
 			{
-				// the last winner wins. lol
+				// everybody else wins
+				avatar.GetComponent<Animator>().SetBool("Winner", true);
+
+				// but only the last winner gets the victory screen :)
 				overlay.sprite = victorySprites[i];
-				avatar.GetComponent<Animator>().SetTrigger("Winner");
 			}
 		}
 		// display winner icon

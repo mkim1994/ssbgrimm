@@ -478,10 +478,11 @@ MonoBehaviour:
   playerPrefab: {fileID: 168548, guid: 48faf6c3bf796164bb43fbd573e4e3be, type: 2}
   shouldDestroy: 0
   countdownSprites:
-  - {fileID: 21300010, guid: 6c3b242cad8df4c4d913dee04470275b, type: 3}
-  - {fileID: 21300008, guid: 6c3b242cad8df4c4d913dee04470275b, type: 3}
-  - {fileID: 21300006, guid: 6c3b242cad8df4c4d913dee04470275b, type: 3}
-  - {fileID: 21300004, guid: 6c3b242cad8df4c4d913dee04470275b, type: 3}
+  - {fileID: 21300000, guid: 5cdb1019339548a49b1f6f10c216194f, type: 3}
+  - {fileID: 21300000, guid: c8a5dda8e46ed6f46a11b8fbf8aeef03, type: 3}
+  - {fileID: 21300000, guid: a85331f340a39334e968b229566d5fb5, type: 3}
+  - {fileID: 21300000, guid: de992d0788628994b858a116e0525b06, type: 3}
+  koSprite: {fileID: 21300000, guid: ef496eddb07528d489626a9d4abdb419, type: 3}
   victorySprites:
   - {fileID: 21300000, guid: 998a5f44dd428364e8c8a092da40f182, type: 3}
   - {fileID: 21300000, guid: 7c0a2680a485a2646bcd6b662373c281, type: 3}
@@ -500,7 +501,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

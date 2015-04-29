@@ -6,7 +6,7 @@ public class PlayerHP : MonoBehaviour {
 
 	public int playerID;
 
-	public static float respawn_delay = 0f;
+	public static float respawn_delay = 3f;
 
 	public float startingHealth = 100f;
 	public float health = 100f;
@@ -92,16 +92,23 @@ public class PlayerHP : MonoBehaviour {
 		Debug.Log("Dying");
 		dead = true;
 		stocks--;
-		// start playing a death animation and respawn here
 		DestroyGem();
+
+		GameObject avatar = GetComponent<CharacterAvatar>().myCharacter;
+		avatar.GetComponent<FightControl>().enabled = false;
+		avatar.GetComponent<MoveControl>().enabled = false;
+		avatar.GetComponent<Animator>().SetTrigger("Loser");
+
+		GameMain main = GameObject.FindWithTag("GameController").GetComponent<GameMain>();
 
 		if ( stocks == 0 )
 		{
 			Debug.Log( "Player Died! Game over!" );
-			GameObject.FindWithTag("GameController").GetComponent<GameMain>().GameOver( playerID );
+			main.GameOver( playerID );
 		}
 		else
 		{
+			main.DisplayKO( playerID );
 			Invoke( "PlayerDead", respawn_delay );
 		}
 	}
@@ -109,9 +116,10 @@ public class PlayerHP : MonoBehaviour {
 	void PlayerDead()
 	{
 		health = startingHealth;
-		// respawn the player here
-		// could just be triggering an animation, or spawning a whole new avatar
-		// could be swapping out to a different character for tag team!
+		GameObject avatar = GetComponent<CharacterAvatar>().myCharacter;
+		avatar.GetComponent<Animator>().SetTrigger("Respawn");
+		avatar.GetComponent<FightControl>().enabled = true;
+		avatar.GetComponent<MoveControl>().enabled = true;
 		dead = false;
 	}
 
