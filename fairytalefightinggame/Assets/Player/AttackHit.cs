@@ -32,6 +32,9 @@ public class AttackHit : MonoBehaviour {
 
 			if (charNum != gameObject.transform.parent.gameObject.tag){ //doesnt hit self (for BC ult)
 				// apply knockback
+
+				gameObject.GetComponentInChildren<ParticleEmitter>().Emit();
+
 				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
 				Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction

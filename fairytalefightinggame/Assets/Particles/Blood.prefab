@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 5.28000021, y: -.579999983, z: 2.38000011}
+  m_LocalPosition: {x: -.168802261, y: -.479243666, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -96,25 +96,25 @@ EllipsoidParticleEmitter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   serializedVersion: 2
-  m_Enabled: 0
-  m_Emit: 1
-  minSize: .100000001
-  maxSize: .400000006
+  m_Enabled: 1
+  m_Emit: 0
+  minSize: .0700000003
+  maxSize: .200000003
   minEnergy: .100000001
-  maxEnergy: .300000012
+  maxEnergy: .5
   minEmission: 20
   maxEmission: 22
   worldVelocity: {x: 0, y: 0, z: 0}
   localVelocity: {x: 0, y: 0, z: 0}
-  rndVelocity: {x: 2, y: 2, z: 0}
+  rndVelocity: {x: .5, y: 0, z: .5}
   emitterVelocityScale: 100
-  tangentVelocity: {x: 5, y: 5, z: 0}
+  tangentVelocity: {x: 0, y: .449999988, z: 0}
   angularVelocity: 0
   rndAngularVelocity: 68.6100006
   rndRotation: 1
   Simulate in Worldspace?: 1
   m_OneShot: 1
-  m_Ellipsoid: {x: 1, y: 1, z: 1}
+  m_Ellipsoid: {x: .25, y: 0, z: .25}
   m_MinEmitterRange: 0
 --- !u!26 &2600000
 ParticleRenderer:
@@ -138,7 +138,7 @@ ParticleRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2029642651
   m_SortingOrder: 0
   serializedVersion: 2
   m_CameraVelocityScale: 0

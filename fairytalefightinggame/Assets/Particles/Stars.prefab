@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.509024799, z: 2.44449115}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .600000024, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .600000024, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -160,15 +160,15 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 0
-  minSize: .400000006
-  maxSize: .600000024
+  minSize: .100000001
+  maxSize: .200000003
   minEnergy: .5
   maxEnergy: .600000024
   minEmission: 4
   maxEmission: 6
   worldVelocity: {x: 0, y: 0, z: 0}
   localVelocity: {x: 0, y: 0, z: 0}
-  rndVelocity: {x: 2, y: 2, z: 0}
+  rndVelocity: {x: 1.5, y: 1.5, z: 0}
   emitterVelocityScale: 100
   tangentVelocity: {x: 1, y: 0, z: 0}
   angularVelocity: 0
@@ -176,7 +176,7 @@ EllipsoidParticleEmitter:
   rndRotation: 1
   Simulate in Worldspace?: 1
   m_OneShot: 1
-  m_Ellipsoid: {x: .300000012, y: .300000012, z: .300000012}
+  m_Ellipsoid: {x: .100000001, y: .100000001, z: 0}
   m_MinEmitterRange: 0
 --- !u!15 &1500002
 EllipsoidParticleEmitter:
@@ -187,15 +187,15 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 0
-  minSize: .400000006
-  maxSize: .600000024
+  minSize: .100000001
+  maxSize: .200000003
   minEnergy: .5
   maxEnergy: .600000024
   minEmission: 4
   maxEmission: 6
   worldVelocity: {x: 0, y: 0, z: 0}
   localVelocity: {x: 0, y: 0, z: 0}
-  rndVelocity: {x: 2, y: 2, z: 0}
+  rndVelocity: {x: 1.5, y: 1.5, z: 0}
   emitterVelocityScale: 100
   tangentVelocity: {x: 1, y: 0, z: 0}
   angularVelocity: 0
@@ -203,7 +203,7 @@ EllipsoidParticleEmitter:
   rndRotation: 1
   Simulate in Worldspace?: 1
   m_OneShot: 1
-  m_Ellipsoid: {x: .300000012, y: .300000012, z: .300000012}
+  m_Ellipsoid: {x: .100000001, y: .100000001, z: 0}
   m_MinEmitterRange: 0
 --- !u!26 &2600000
 ParticleRenderer:
@@ -227,7 +227,7 @@ ParticleRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2029642651
   m_SortingOrder: 0
   serializedVersion: 2
   m_CameraVelocityScale: 0
@@ -261,7 +261,7 @@ ParticleRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2029642651
   m_SortingOrder: 0
   serializedVersion: 2
   m_CameraVelocityScale: 0
