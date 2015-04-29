@@ -44,8 +44,10 @@ public class AttackHit : MonoBehaviour {
 			charNum = "Player" + charNum + "Ult";
 
 				// apply knockback
-
-				gameObject.GetComponentInChildren<ParticleEmitter>().Emit();
+				ParticleEmitter[] emitters = gameObject.GetComponentsInChildren<ParticleEmitter>();
+				for (int i = 0; i < emitters.Length; i++){
+					emitters[i].Emit();
+				}
 
 				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
