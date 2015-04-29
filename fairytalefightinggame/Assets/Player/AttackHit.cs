@@ -44,6 +44,9 @@ public class AttackHit : MonoBehaviour {
 			charNum = "Player" + charNum + "Ult";
 
 				// apply knockback
+
+				gameObject.GetComponentInChildren<ParticleEmitter>().Emit();
+
 				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
 				Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
