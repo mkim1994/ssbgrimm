@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 019b58c3d1a9d344b9a6f6f93ef6ccff
-timeCreated: 1430150468
+timeCreated: 1430274338
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BBG_ultimate_sheet2_0
+    21300002: BBG_ultimate_sheet2_1
+    21300004: BBG_ultimate_sheet2_2
+    21300006: BBG_ultimate_sheet2_3
+    21300008: BBG_ultimate_sheet2_4
+    21300010: BBG_ultimate_sheet2_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +54,67 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: BBG_ultimate_sheet2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 500
+        height: 265
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_ultimate_sheet2_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 4
+        width: 500
+        height: 265
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_ultimate_sheet2_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4
+        width: 500
+        height: 265
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_ultimate_sheet2_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 4
+        width: 500
+        height: 265
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_ultimate_sheet2_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5
+        width: 500
+        height: 265
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BBG_ultimate_sheet2_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 5
+        width: 483
+        height: 265
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

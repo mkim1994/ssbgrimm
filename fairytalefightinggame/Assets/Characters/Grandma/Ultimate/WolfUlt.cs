@@ -37,11 +37,11 @@ public class WolfUlt : MonoBehaviour {
 				moving = false;
 				PlayerHP otherHP = other.GetComponentInParent<PlayerHP> ();
 				otherHP.FlatDamage (dammage);
-				anim.SetTrigger ("Ultimate"); //end ult anim
+				anim.SetTrigger ("UltimateEnd"); //end ult anim
 				Invoke("EndUlt",0.5f);
 			} else if (other.tag == "Wall") { //hit wall
 				moving = false;
-				anim.SetTrigger ("Ultimate"); //end ult anim
+				anim.SetTrigger ("UltimateEnd"); //end ult anim
 				Invoke("EndUlt",0.5f);
 			}
 		}
