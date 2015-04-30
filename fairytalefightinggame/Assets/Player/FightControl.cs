@@ -134,6 +134,8 @@ public class FightControl : MonoBehaviour {
 			else if (anim.name == "Grandma(Clone)"){ //if grandma is casting it
 				gameObject.GetComponent<WolfUlt>().Invoke("BBGUlt",1f); //cast ult
 			}
+
+			Invoke("ResetUltimate", 1);
 		}		
 	}
 
@@ -146,6 +148,7 @@ public class FightControl : MonoBehaviour {
 	public void ResetUltimate()
 	{
 		apple.transform.localScale = new Vector3( baseScale.x * ultcharge / 100.0f, baseScale.y * ultcharge / 100.0f, 1.0f );
+		apple.transform.position = new Vector3( apple.transform.position.x, Mathf.Lerp(1.13f, 1.032f, ultcharge / 100.0f), apple.transform.position.z );
 	}
 
 	void EndUltimate()

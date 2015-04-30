@@ -17,6 +17,7 @@ public class AppleScale : MonoBehaviour {
 	{
 		float size = anim.GetFloat("Size");
 		transform.localScale = new Vector3( baseScale.x * (size / 100.0f), baseScale.y * (size / 100.0f), baseScale.z );
+		transform.position = new Vector3( transform.position.x, Mathf.Lerp(1.13f, 1.032f, size / 100.0f), transform.position.z );
 	}
 
 	public Vector3 GetScale()
