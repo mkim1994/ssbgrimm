@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 2d018e22e2f9b6a49b4314c604744b30
-timeCreated: 1430428705
+guid: 1ead231717dad8b45b7a4ccd57d6ae82
+timeCreated: 1430428278
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FG_special_sheet_0
-    21300002: FG_special_sheet_1
-    21300004: FG_special_sheet_2
+    21300000: FG_crouchattack_sheet_0
+    21300002: FG_crouchattack_sheet_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,7 +51,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: FG_special_sheet_0
+    - name: FG_crouchattack_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -62,20 +61,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FG_special_sheet_1
+    - name: FG_crouchattack_sheet_1
       rect:
         serializedVersion: 2
         x: 198
-        y: 0
-        width: 198
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FG_special_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 396
         y: 0
         width: 198
         height: 190

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 938b22a8e4ea1804cbb6b1f619b52626
-timeCreated: 1429401569
+timeCreated: 1430428515
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -28,8 +28,8 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -2
-  maxTextureSize: 4096
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -59,7 +59,7 @@ TextureImporter:
         width: 198
         height: 190
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FG_gethit_sheet_1
       rect:
@@ -69,7 +69,7 @@ TextureImporter:
         width: 198
         height: 190
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
