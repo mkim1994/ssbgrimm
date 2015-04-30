@@ -79,7 +79,7 @@ public class GameMain : MonoBehaviour {
 		int killerID = deadID == 0 ? 1 : 0;
 
 		GameObject killer = players[killerID].playerObject.GetComponent<CharacterAvatar>().myCharacter;
-		killer.GetComponent<Animator>().SetBool("Winner", true);
+		killer.GetComponent<Animator>().SetTrigger("Winner");
 		FightControl disabled = killer.GetComponent<FightControl>();
 		disabled.enabled = false;
 		StartCoroutine(ClearSprite(disabled));
@@ -89,7 +89,7 @@ public class GameMain : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(3); // MUST MATCH RESPAWN DELAY
 		overlay.enabled = false;
-		toEnable.gameObject.GetComponent<Animator>().SetBool("Winner", false);
+		toEnable.gameObject.GetComponent<Animator>().SetTrigger("Respawn");
 		toEnable.enabled = true;
 	}
 
@@ -199,7 +199,7 @@ public class GameMain : MonoBehaviour {
 			else
 			{
 				// everybody else wins
-				avatar.GetComponent<Animator>().SetBool("Winner", true);
+				avatar.GetComponent<Animator>().SetTrigger("Winner");
 
 				// but only the last winner gets the victory screen :)
 				overlay.sprite = victorySprites[i];

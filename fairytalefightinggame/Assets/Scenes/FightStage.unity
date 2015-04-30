@@ -283,6 +283,7 @@ GameObject:
   - 4: {fileID: 471844461}
   - 212: {fileID: 471844460}
   - 95: {fileID: 471844459}
+  - 114: {fileID: 471844462}
   m_Layer: 0
   m_Name: Apple2
   m_TagString: Ult2
@@ -347,6 +348,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &471844462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471844458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0efb0bc0ad0aa1458b7008ce529c3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515146856
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +826,7 @@ GameObject:
   - 4: {fileID: 1089247687}
   - 212: {fileID: 1089247686}
   - 95: {fileID: 1089247685}
+  - 114: {fileID: 1089247688}
   m_Layer: 0
   m_Name: Apple1
   m_TagString: Ult1
@@ -878,6 +891,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1089247688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089247684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0efb0bc0ad0aa1458b7008ce529c3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1239055917
 GameObject:
   m_ObjectHideFlags: 0
