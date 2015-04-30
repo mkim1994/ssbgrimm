@@ -17,6 +17,7 @@ public class Polymorph : MonoBehaviour {
 			anim.Play ("Idle");
 		} else {
 			Rigidbody2D body = polyPlayer.GetComponent<Rigidbody2D>();
+			body.AddForce(new Vector2(0f,6000f));
 			body.velocity = new Vector2(-body.velocity.x,0f); //turn around
 			polyPlayer.transform.localScale = new Vector2(-polyPlayer.transform.localScale.x,polyPlayer.transform.localScale.y);//flip
 			Invoke ("unPoly", 1.0f);
