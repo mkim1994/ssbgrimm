@@ -38,6 +38,10 @@ public class WolfUlt : MonoBehaviour {
 				PlayerHP otherHP = other.GetComponentInParent<PlayerHP> ();
 				otherHP.FlatDamage (dammage);
 				anim.SetTrigger ("UltimateEnd"); //end ult anim
+				ParticleEmitter[] emitters = gameObject.GetComponentsInChildren<ParticleEmitter>();
+				for (int i = 0; i < emitters.Length; i++){
+					emitters[i].Emit();
+				}
 				Invoke("EndUlt",0.5f);
 			} else if (other.tag == "Wall") { //hit wall
 				moving = false;
