@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 217d835cc608a804bb68ab6eab64a77d
-timeCreated: 1430350703
+timeCreated: 1430437844
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,82 +60,72 @@ TextureImporter:
     - name: BBG_lose_sheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
-        width: 266
-        height: 157
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_lose_sheet_1
       rect:
         serializedVersion: 2
-        x: 508
-        y: 5
-        width: 273
-        height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_lose_sheet_2
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 5
-        width: 265
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_lose_sheet_3
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 43
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_lose_sheet_4
       rect:
         serializedVersion: 2
-        x: 1507
-        y: 5
-        width: 274
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_lose_sheet_5
       rect:
         serializedVersion: 2
-        x: 2008
-        y: 5
-        width: 273
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_lose_sheet_6
       rect:
         serializedVersion: 2
-        x: 2507
-        y: 5
-        width: 275
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BBG_lose_sheet_7
-      rect:
-        serializedVersion: 2
-        x: 3008
-        y: 5
-        width: 273
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

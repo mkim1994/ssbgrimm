@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8f4fe055d4d450d40a80b09dece1c816
-timeCreated: 1430349153
+timeCreated: 1430440165
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,22 +54,22 @@ TextureImporter:
     - name: BC_win_sheet_loop_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 81
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 250
+        height: 125
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BC_win_sheet_loop_1
       rect:
         serializedVersion: 2
-        x: 261
-        y: 5
-        width: 81
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 250
+        y: 0
+        width: 250
+        height: 125
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

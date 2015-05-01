@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e09a80dde1551bc41bc27f98e44c23cc
-timeCreated: 1430350634
+timeCreated: 1430437592
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,72 +59,62 @@ TextureImporter:
     - name: BBG_win_sheet_loop_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 5
-        width: 217
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_loop_1
       rect:
         serializedVersion: 2
-        x: 505
-        y: 5
-        width: 216
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_loop_2
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 5
-        width: 217
-        height: 219
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_loop_3
       rect:
         serializedVersion: 2
-        x: 1504
-        y: 5
-        width: 218
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_loop_4
       rect:
         serializedVersion: 2
-        x: 1973
-        y: 5
-        width: 217
-        height: 219
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_loop_5
       rect:
         serializedVersion: 2
-        x: 2472
-        y: 5
-        width: 217
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BBG_win_sheet_loop_6
-      rect:
-        serializedVersion: 2
-        x: 2972
-        y: 5
-        width: 218
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

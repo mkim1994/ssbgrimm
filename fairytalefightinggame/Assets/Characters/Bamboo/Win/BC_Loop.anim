@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BBG_Run
+  m_Name: BC_Loop
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,9 +18,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 0fc7166265bcac645933546f8fecdfaa, type: 3}
+      value: {fileID: 21300000, guid: 8f4fe055d4d450d40a80b09dece1c816, type: 3}
     - time: .0333333351
-      value: {fileID: 21300002, guid: 0fc7166265bcac645933546f8fecdfaa, type: 3}
+      value: {fileID: 21300002, guid: 8f4fe055d4d450d40a80b09dece1c816, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -39,8 +39,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 0fc7166265bcac645933546f8fecdfaa, type: 3}
-    - {fileID: 21300002, guid: 0fc7166265bcac645933546f8fecdfaa, type: 3}
+    - {fileID: 21300000, guid: 8f4fe055d4d450d40a80b09dece1c816, type: 3}
+    - {fileID: 21300002, guid: 8f4fe055d4d450d40a80b09dece1c816, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0

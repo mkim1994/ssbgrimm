@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6edc20394a3507f489dfbd85d8982fc4
-timeCreated: 1430350617
+timeCreated: 1430437649
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,92 +61,92 @@ TextureImporter:
     - name: BBG_win_sheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 218
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_1
       rect:
         serializedVersion: 2
-        x: 527
-        y: 4
-        width: 194
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_2
       rect:
         serializedVersion: 2
-        x: 1031
-        y: 4
-        width: 180
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_3
       rect:
         serializedVersion: 2
-        x: 1529
-        y: 4
-        width: 183
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_4
       rect:
         serializedVersion: 2
-        x: 2030
-        y: 4
-        width: 180
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_5
       rect:
         serializedVersion: 2
-        x: 2529
-        y: 4
-        width: 182
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_6
       rect:
         serializedVersion: 2
-        x: 3030
-        y: 4
-        width: 182
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_7
       rect:
         serializedVersion: 2
-        x: 3527
-        y: 4
-        width: 195
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3500
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BBG_win_sheet_8
       rect:
         serializedVersion: 2
-        x: 4003
-        y: 4
-        width: 218
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4000
+        y: 0
+        width: 500
+        height: 254
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
