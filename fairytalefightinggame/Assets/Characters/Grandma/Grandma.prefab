@@ -1110,8 +1110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 14
-  ultcharge: 0
+  damage: 13
+  ultcharge: 8
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
