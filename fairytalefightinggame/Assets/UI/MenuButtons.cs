@@ -20,6 +20,8 @@ public class MenuButtons : MonoBehaviour {
 	{
 		// todo - figure out world camera, pan to page with credits
 		// easy out - load another level for controls
+
+		Application.LoadLevel("CreditsScene");
 	}
 
 	public void QuitGame()
