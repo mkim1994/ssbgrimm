@@ -476,6 +476,7 @@ MonoBehaviour:
   - {x: -2, y: -1}
   - {x: 2, y: -1}
   playerPrefab: {fileID: 168548, guid: 48faf6c3bf796164bb43fbd573e4e3be, type: 2}
+  fight: {fileID: 8300000, guid: b5f85409d71a46b4585c3054524dcbb1, type: 3}
   shouldDestroy: 0
   countdownSprites:
   - {fileID: 21300000, guid: 5cdb1019339548a49b1f6f10c216194f, type: 3}
