@@ -26,7 +26,8 @@ public class GameMain : MonoBehaviour {
     public Sprite[] countdownSprites;
     public Sprite koSprite;
     public Sprite[] victorySprites;
-    private Image overlay;
+    public Image overlay;
+    private Image fullOverlay;
     private GoBack goback = null;
 
     private void StartMusic()
@@ -43,7 +44,8 @@ public class GameMain : MonoBehaviour {
 		// this should live until we quit the game, or go back to main menu
 		DontDestroyOnLoad(transform.gameObject);
         StartMusic();
-        overlay = GetComponent<Image>();
+        fullOverlay = GetComponent<Image>();
+        fullOverlay.enabled = false;
         overlay.enabled = false;
         goback = GetComponent<GoBack>();
 	}
@@ -172,7 +174,13 @@ public class GameMain : MonoBehaviour {
 				playerAvatar.SpawnCharacter( player.characterID );
 				playerAvatar.InitControls( i );
 
-				FightControl fc = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<FightControl>();
+				GameObject playerCharacter = playerAvatar.myCharacter;
+				if ( i > 0 && player.characterID == players[i-1].characterID )
+				{
+					playerCharacter.GetComponent<SpriteRenderer>().color = new Color( 1.0f, 0.5f, 0.5f, 1.0f );
+				}
+
+				FightControl fc = playerCharacter.GetComponent<FightControl>();
 				fc.apple = GameObject.FindWithTag( i == 0 ? "Ult1" : "Ult2" );
 				fc.InitUltimate();
 				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
@@ -187,6 +195,7 @@ public class GameMain : MonoBehaviour {
 		{	
 			goback.enabled = true;
 			overlay.enabled = false;
+			fullOverlay.enabled = false;
 
 			// choose a random background image
 			randomBG = (int)(Random.value * backgrounds.Length);
@@ -229,11 +238,11 @@ public class GameMain : MonoBehaviour {
 				avatar.GetComponent<Animator>().SetTrigger("Winner");
 
 				// but only the last winner gets the victory screen :)
-				overlay.sprite = victorySprites[i];
+				fullOverlay.sprite = victorySprites[i];
 			}
 		}
 		// display winner icon
-		overlay.enabled = true;
+		fullOverlay.enabled = true;
 		goback.enabled = true;
 
 		Invoke("Restart", 6);
