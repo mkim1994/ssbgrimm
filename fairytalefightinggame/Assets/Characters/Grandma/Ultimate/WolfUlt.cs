@@ -33,7 +33,9 @@ public class WolfUlt : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll){
 		if (moving) { //if using ult
 			GameObject other = coll.collider.gameObject;
+			Debug.Log (other.tag);
 			if (other.tag == "Avatar") { //hit player
+				Debug.Log ("Rarr!");
 				moving = false;
 				PlayerHP otherHP = other.GetComponentInParent<PlayerHP> ();
 				otherHP.FlatDamage (dammage);
