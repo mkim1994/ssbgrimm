@@ -1377,7 +1377,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Loser
-  m_Speed: 1
+  m_Speed: .200000003
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110192014}
@@ -1570,7 +1570,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Winner_loop
-  m_Speed: 1
+  m_Speed: .600000024
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110137678}
