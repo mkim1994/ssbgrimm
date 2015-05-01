@@ -177,7 +177,7 @@ public class GameMain : MonoBehaviour {
 				GameObject playerCharacter = playerAvatar.myCharacter;
 				if ( i > 0 && player.characterID == players[i-1].characterID )
 				{
-					playerCharacter.GetComponent<SpriteRenderer>().color = new Color( 1.0f, 0.5f, 0.5f, 1.0f );
+					playerCharacter.GetComponent<SpriteRenderer>().color = new Color( 0.6f, 0.6f, 0.6f, 1.0f );
 				}
 
 				FightControl fc = playerCharacter.GetComponent<FightControl>();
