@@ -4,12 +4,12 @@ using System.Collections;
 public class SoundController : MonoBehaviour {
 
 	public AudioClip attack_Idle;
-	public AudioClip attack_Crouch;
-	public AudioClip attack_Jump;
 	public AudioClip getHit;
-	public AudioClip jump;
 	public AudioClip special;
 	public AudioClip ultimate;
+	public AudioClip block;
+	public AudioClip win;
+	public AudioClip enter;
 	private AudioSource player;
 
 	void Start(){
@@ -19,22 +19,31 @@ public class SoundController : MonoBehaviour {
 		player.PlayOneShot (attack_Idle);
 	}
 	public void  Play_Attack_Crouch() {
-		player.PlayOneShot (attack_Crouch);
+		player.PlayOneShot (attack_Idle);
 	}
 	public void  Play_Attack_Jump() {
-		player.PlayOneShot (attack_Jump);
+		player.PlayOneShot (attack_Idle);
 	}	
 	public void  Play_GetHit() {
 		player.PlayOneShot (getHit);
 	}
 	public void  Play_Jump() {
-		player.PlayOneShot (jump);
+		//player.PlayOneShot (jump);
 	}
 	public void  Play_Special() {
 		player.PlayOneShot (special);
 	}
 	public void  Play_Ultimate() {
 		player.PlayOneShot (ultimate);
+	}
+	public void Play_Block(){
+		player.PlayOneShot (block);
+	}
+	public void Play_Win(){
+		player.PlayOneShot (win);
+	}
+	public void Play_Enter(){
+		player.PlayOneShot (enter);
 	}
 
 }
