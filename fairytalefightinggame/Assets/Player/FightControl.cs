@@ -88,6 +88,7 @@ public class FightControl : MonoBehaviour {
 	void BeginBlock()
 	{
 		if (sheild > 30.0f) {
+			gameObject.GetComponent<SoundController> ().Play_Block ();
 			anim.SetBool ("Block", true);
 			barrier = new GameObject();
 			barrier.transform.position = transform.position;
