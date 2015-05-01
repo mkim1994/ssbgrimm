@@ -18,6 +18,8 @@ public class GameMain : MonoBehaviour {
 	public Vector2[] spawnPoints;
 	public GameObject playerPrefab;
 
+	public AudioClip fight;
+
     private bool musicPlaying = false;
     public bool shouldDestroy = false;
 
@@ -65,10 +67,19 @@ public class GameMain : MonoBehaviour {
 		overlay.sprite = countdownSprites[1];
 		yield return new WaitForSeconds(1);
 		Debug.Log("FIGHT!");
+		gameObject.GetComponent<AudioSource> ().PlayOneShot (fight);
 		overlay.sprite = countdownSprites[0];
 		yield return new WaitForSeconds(1);
 		overlay.enabled = false;
-		Application.LoadLevel( "FightStage" );
+
+		MoveControl[] mControls = FindObjectsOfType<MoveControl>();
+		for (int i = 0; i < mControls.Length; i++){
+			mControls[i].enabled = true;
+		}
+		FightControl[] fControls = FindObjectsOfType<FightControl>();
+		for (int i = 0; i < fControls.Length; i++) {
+			fControls [i].enabled = true;
+		}
 	}
 
 	public void DisplayKO( int deadID )
@@ -95,7 +106,20 @@ public class GameMain : MonoBehaviour {
 
 	public void BeginFight()
 	{
-		StartCoroutine("Countdown");
+		overlay.enabled = false;
+		overlay.sprite = null;
+		Application.LoadLevel( "FightStage" );
+	}
+
+	void Dissable(){
+		MoveControl[] mControls = FindObjectsOfType<MoveControl>();
+		for (int i = 0; i < mControls.Length; i++){
+			mControls[i].enabled = false; //dissable all movecontrols
+		}
+		FightControl[] fControls = FindObjectsOfType<FightControl>();
+		for (int i = 0; i < fControls.Length; i++){
+			fControls[i].enabled = false; //dissable all fight controls
+		}
 	}
 
 	void OnLevelWasLoaded( int level )
@@ -103,8 +127,10 @@ public class GameMain : MonoBehaviour {
 		// the fight stage - we just called BeginFight()
 		if ( Application.loadedLevelName == "FightStage" )
 		{
+
+			StartCoroutine("Countdown");
+
 			goback.enabled = false;
-			overlay.sprite = null;
 
 			// display the previously selected background
 			RawImage bg = GameObject.FindWithTag("Background").GetComponent<RawImage>();
@@ -151,8 +177,9 @@ public class GameMain : MonoBehaviour {
 				fc.InitUltimate();
 				Animator anim = player.playerObject.GetComponent<CharacterAvatar>().myCharacter.GetComponent<Animator>();
 				playerHP.Init( anim, fc );	
-				playerHP.playerID = i;		
+				playerHP.playerID = i;	
 			}
+			Invoke("Dissable",0.01f);
 
 			shouldDestroy = true;
 		}
