@@ -68,10 +68,6 @@ public class FightControl : MonoBehaviour {
 		{
 			BeginUltimate();
 		}
-		else if ( Input.GetButtonUp( UltimateButton ) )
-		{
-			EndUltimate();
-		}
 
 	}
 
@@ -123,6 +119,7 @@ public class FightControl : MonoBehaviour {
 	{
 		if ( ultcharge >= 100.0f )
 		{
+			anim.SetBool ("isUlting", true);
 			anim.SetTrigger( "Ultimate");
 			ultcharge = 0.0f;
 			apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
@@ -152,8 +149,9 @@ public class FightControl : MonoBehaviour {
 		apple.transform.position = new Vector3( apple.transform.position.x, Mathf.Lerp(1.13f, 1.032f, ultcharge / 100.0f), apple.transform.position.z );
 	}
 
-	void EndUltimate()
+	public void EndUltimate()
 	{
+		anim.SetBool ("isUlting", false);
 	}
 
 	public void ChargeUltimate( float charge )
