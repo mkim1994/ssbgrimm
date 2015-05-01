@@ -32,7 +32,9 @@ public class AttackHit : MonoBehaviour {
 	}
 
 	void EndCC(){
-		otherBody.GetComponent<MoveControl> ().enabled = true;
+		if (otherBody.transform.parent.GetComponent<PlayerHP> ().health > 0f) {
+			otherBody.GetComponent<MoveControl> ().enabled = true;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
