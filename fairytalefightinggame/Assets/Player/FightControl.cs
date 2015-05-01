@@ -110,7 +110,7 @@ public class FightControl : MonoBehaviour {
 	{
 		anim.SetTrigger("Special");
 		if (anim.name == "Fairy(Clone)") { //if fairy is casting it
-			gameObject.GetComponent<Projectiles> ().Invoke ("Fire", 0.5f);
+			//gameObject.GetComponent<Projectiles> ().Invoke ("Fire", 0.5f);
 		}
 	}
 
