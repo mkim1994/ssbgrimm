@@ -1573,8 +1573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 15
-  ultcharge: 10
+  damage: 5
+  ultcharge: 20
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
@@ -1606,12 +1606,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 15
-  ultcharge: 10
+  damage: 6
+  ultcharge: 18
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 100
+  knockbackForce: 120
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11424058
 MonoBehaviour:
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPercent: 1
   damage: 2
-  ultcharge: 2
+  ultcharge: 5
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
@@ -1740,12 +1740,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 15
+  damage: 12
   ultcharge: 10
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 100
+  knockbackForce: 50
   knockbackDirection: {x: 10, y: 100}
 --- !u!114 &11485800
 MonoBehaviour:
