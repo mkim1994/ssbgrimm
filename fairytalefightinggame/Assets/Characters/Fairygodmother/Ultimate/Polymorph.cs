@@ -8,7 +8,7 @@ public class Polymorph : MonoBehaviour {
 	private GameObject polyPlayer;
 
 	void unPoly(){
-		if (duration >= 3.5f) { //unpolymorph
+		if (duration >= 1.5f) { //unpolymorph
 			polyPlayer.GetComponent<MoveControl> ().enabled = true;
 			polyPlayer.GetComponent<FightControl> ().enabled = true;
 			Animator anim = polyPlayer.GetComponent<Animator> ();

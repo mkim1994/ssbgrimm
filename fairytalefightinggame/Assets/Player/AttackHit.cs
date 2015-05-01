@@ -14,6 +14,8 @@ public class AttackHit : MonoBehaviour {
 	public float knockbackForce;
 	public Vector2 knockbackDirection;
 
+	private Rigidbody2D otherBody;
+
 	void Start()
 	{
 		knockbackDirection.Normalize();
@@ -27,6 +29,10 @@ public class AttackHit : MonoBehaviour {
 		Transform po = this.gameObject.transform.parent;
 		parent = po.gameObject.GetComponent<Collider2D> ();
 		Debug.Log (parent);
+	}
+
+	void EndCC(){
+		otherBody.GetComponent<MoveControl> ().enabled = true;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -51,10 +57,16 @@ public class AttackHit : MonoBehaviour {
 				PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
 				if(otherHP.health == 0f)
 					return;
-				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
+				otherBody = other.GetComponent<Rigidbody2D>();
+				if (knockbackForce > 100 && !other.GetComponent<Animator>().GetBool("Block")){ 
+					other.GetComponent<MoveControl>().enabled = false;
+					float cctime = knockbackForce/1000;
+					Invoke("EndCC",cctime);
+				}
+
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
 				Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
-				otherBody.AddForce( knockback, ForceMode2D.Impulse );
+				otherBody.AddForce( knockback, ForceMode2D.Impulse );c
 				other.GetComponent<Animator>().SetTrigger("Hit");
 
 				// deal damage to the other player
