@@ -66,7 +66,9 @@ public class AttackHit : MonoBehaviour {
 
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
 				Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
-				otherBody.AddForce( knockback, ForceMode2D.Impulse );c
+				if (!other.GetComponent<Animator>().GetBool("Block")){
+					otherBody.AddForce( knockback, ForceMode2D.Impulse );
+				}
 				other.GetComponent<Animator>().SetTrigger("Hit");
 
 				// deal damage to the other player
