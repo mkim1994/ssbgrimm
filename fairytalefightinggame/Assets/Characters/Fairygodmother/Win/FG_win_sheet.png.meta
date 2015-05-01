@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 49f071173f108774fa696c45f59f842f
-timeCreated: 1430429661
+timeCreated: 1430440442
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,8 +59,8 @@ TextureImporter:
         y: 0
         width: 198
         height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .375, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FG_win_sheet_1
       rect:
@@ -69,8 +69,8 @@ TextureImporter:
         y: 0
         width: 198
         height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .375, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FG_win_sheet_2
       rect:
@@ -79,8 +79,8 @@ TextureImporter:
         y: 0
         width: 198
         height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .375, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -48,7 +48,9 @@ public class AttackHit : MonoBehaviour {
 				for (int i = 0; i < emitters.Length; i++){
 					emitters[i].Emit();
 				}
-
+				PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
+				if(otherHP.health == 0f)
+					return;
 				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
 				float sign = otherBody.transform.position.x > transform.position.x ? 1f : -1f;
 				Vector2 knockback = new Vector2(knockbackDirection.x * sign * knockbackForce, knockbackDirection.y * knockbackForce); //flip only x direction
@@ -56,7 +58,7 @@ public class AttackHit : MonoBehaviour {
 				other.GetComponent<Animator>().SetTrigger("Hit");
 
 				// deal damage to the other player
-				PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
+				//PlayerHP otherHP = other.GetComponentInParent<PlayerHP>();
 				if ( isPercent )
 				{
 					otherHP.PercentDamage( damage );
