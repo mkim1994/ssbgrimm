@@ -1060,7 +1060,7 @@ MonoBehaviour:
   fc: {fileID: 0}
   parent: {fileID: 0}
   knockbackForce: 50
-  knockbackDirection: {x: 10, y: 100}
+  knockbackDirection: {x: 5, y: 1}
 --- !u!114 &11471584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1078,8 +1078,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 200
-  knockbackDirection: {x: 10, y: 100}
+  knockbackForce: 150
+  knockbackDirection: {x: 0, y: 100}
 --- !u!114 &11480986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1110,13 +1110,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 18
+  damage: 14
   ultcharge: 0
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 1
-  knockbackDirection: {x: 10, y: 100}
+  knockbackForce: 150
+  knockbackDirection: {x: 10, y: 5}
 --- !u!114 &11488978
 MonoBehaviour:
   m_ObjectHideFlags: 1

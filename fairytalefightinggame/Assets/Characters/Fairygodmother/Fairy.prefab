@@ -1612,7 +1612,7 @@ MonoBehaviour:
   fc: {fileID: 0}
   parent: {fileID: 0}
   knockbackForce: 120
-  knockbackDirection: {x: 10, y: 100}
+  knockbackDirection: {x: 7, y: 10}
 --- !u!114 &11424058
 MonoBehaviour:
   m_ObjectHideFlags: 1
