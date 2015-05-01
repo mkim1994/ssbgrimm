@@ -1483,7 +1483,7 @@ MonoBehaviour:
   fc: {fileID: 0}
   parent: {fileID: 0}
   knockbackForce: 150
-  knockbackDirection: {x: 10, y: 5}
+  knockbackDirection: {x: 2, y: 5}
 --- !u!114 &11438578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1608,8 +1608,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 150
-  knockbackDirection: {x: 10, y: 5}
+  knockbackForce: 170
+  knockbackDirection: {x: 5, y: -10}
 --- !u!114 &11482430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1627,7 +1627,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 150
+  knockbackForce: 110
   knockbackDirection: {x: 10, y: 5}
 --- !u!114 &11488960
 MonoBehaviour:
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   fc: {fileID: 0}
   parent: {fileID: 0}
-  knockbackForce: 500
+  knockbackForce: 450
   knockbackDirection: {x: 10, y: 5}
 --- !u!212 &21242252
 SpriteRenderer:

@@ -119,7 +119,7 @@ public class FightControl : MonoBehaviour {
 	{
 		if ( ultcharge >= 100.0f )
 		{
-			//anim.SetBool ("isUlting", true);
+			anim.SetBool ("isUlting", true);
 			anim.SetTrigger( "Ultimate");
 			ultcharge = 0.0f;
 			apple.GetComponent<Animator>().SetFloat("Size", ultcharge);
@@ -151,6 +151,7 @@ public class FightControl : MonoBehaviour {
 
 	public void EndUltimate()
 	{
+		anim.SetBool ("isUlting", false);
 	}
 
 	public void ChargeUltimate( float charge )

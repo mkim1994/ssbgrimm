@@ -18,7 +18,7 @@ InputManager:
     sensitivity: 1000
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 1
   - serializedVersion: 3
@@ -34,7 +34,7 @@ InputManager:
     sensitivity: 1000
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 1
   - serializedVersion: 3
@@ -58,7 +58,7 @@ InputManager:
     descriptiveName: P1 Block
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 1 button 2
+    positiveButton: joystick 1 button 1
     altNegativeButton: 
     altPositiveButton: t
     gravity: 0
@@ -74,7 +74,7 @@ InputManager:
     descriptiveName: P1 Special
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 1 button 1
+    positiveButton: joystick 1 button 2
     altNegativeButton: 
     altPositiveButton: y
     gravity: 0
@@ -114,7 +114,7 @@ InputManager:
     sensitivity: 1000
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 2
   - serializedVersion: 3
@@ -130,7 +130,7 @@ InputManager:
     sensitivity: 1000
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 2
   - serializedVersion: 3
@@ -154,7 +154,7 @@ InputManager:
     descriptiveName: P2 Block
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 2 button 2
+    positiveButton: joystick 2 button 1
     altNegativeButton: 
     altPositiveButton: '['
     gravity: 0
@@ -170,7 +170,7 @@ InputManager:
     descriptiveName: P2 Special
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 2 button 1
+    positiveButton: joystick 2 button 2
     altNegativeButton: 
     altPositiveButton: p
     gravity: 0
