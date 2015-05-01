@@ -5,7 +5,14 @@ public class BambooUlt : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		float delay = Random.Range(0, 10);
+		float delay = Random.Range(0, 6);
+		if (delay != 5) {
+			float randValue = Random.value;
+			if (randValue < .35f) // 45% of the time
+			{
+				delay = 5;
+			}
+		}
 		delay = delay / 2;
 		Invoke ("Go", delay);
 	}
