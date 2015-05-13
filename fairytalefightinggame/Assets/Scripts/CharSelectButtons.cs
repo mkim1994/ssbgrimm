@@ -10,10 +10,13 @@ public class CharSelectButtons : MonoBehaviour {
 	public GameMain main = null;
 	private Image indicatorPlayer = null;
 
+	public GameObject firstselected;
+
 	private int playerID = 0;
 
 	// Use this for initialization
 	void Start () {
+
 		main = GameObject.FindWithTag("GameController").GetComponent<GameMain>();
 		indicatorPlayer = GameObject.FindWithTag("CharacterSelect").GetComponent<Image>();
 		indicatorPlayer.sprite = indicators[0];
@@ -23,7 +26,10 @@ public class CharSelectButtons : MonoBehaviour {
 	{
 		GameObject.FindWithTag("GameController").GetComponent<GameMain>().SetCharacterForPlayer( playerID, id );
 		playerID++;
+		Invoke("miniselect",0.5f);
+	}
 
+	void miniselect(){
 		if ( playerID >= main.numplayers )
 		{
 			playerID = 0;
@@ -41,6 +47,7 @@ public class CharSelectButtons : MonoBehaviour {
 		StandaloneInputModule[] modules = GetComponents<StandaloneInputModule>();
 		modules[playerID - 1].enabled = false;
 		modules[playerID].enabled = true;
+		EventSystem.current.SetSelectedGameObject(firstselected);
 	}
 
 }
