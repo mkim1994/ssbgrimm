@@ -19,15 +19,15 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 49f071173f108774fa696c45f59f842f, type: 3}
-    - time: .0500000007
+    - time: .166666672
       value: {fileID: 21300002, guid: 49f071173f108774fa696c45f59f842f, type: 3}
-    - time: .100000001
+    - time: .333333343
       value: {fileID: 21300004, guid: 49f071173f108774fa696c45f59f842f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 30
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -47,7 +47,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .116666667
+    m_StopTime: .366666675
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -67,7 +67,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: .0166666675
+  - time: .0333333351
     functionName: Play_Win
     data: 
     objectReferenceParameter: {fileID: 0}

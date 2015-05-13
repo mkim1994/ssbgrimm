@@ -1789,8 +1789,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vertical: Vertical1
   Horizontal: Horizontal1
-  jumpforce: 250
-  speed: 3
+  jumpforce: 200
+  speed: 2.5
   direction: 0
 --- !u!114 &11492264
 MonoBehaviour:

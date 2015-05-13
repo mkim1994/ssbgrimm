@@ -19,17 +19,17 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 2d018e22e2f9b6a49b4314c604744b30, type: 3}
-    - time: .0500000007
-      value: {fileID: 21300002, guid: 2d018e22e2f9b6a49b4314c604744b30, type: 3}
     - time: .100000001
+      value: {fileID: 21300002, guid: 2d018e22e2f9b6a49b4314c604744b30, type: 3}
+    - time: .166666672
       value: {fileID: 21300004, guid: 2d018e22e2f9b6a49b4314c604744b30, type: 3}
-    - time: .200000003
+    - time: .400000006
       value: {fileID: 21300000, guid: 74aa24f0fdb254149960bee07409fc3d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 30
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -50,7 +50,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .216666669
+    m_StopTime: .433333337
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -70,14 +70,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: .0500000007
+  - time: .100000001
     functionName: Play_Special
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .100000001
+  - time: .200000003
     functionName: Fire
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -18,15 +18,20 @@ public class FightControl : MonoBehaviour {
 
 	private float ultcharge = 0.0000001f;
 
+	MoveControl movecontrol;
+
 	void Start() 
 	{
 		anim = GetComponent<Animator>();
 		ultcharge = 0.0000001f;
+
+		movecontrol = GetComponent<MoveControl>();
 	}
 	
 	// Each frame - read input, trigger animation and states
 	void Update () 
 	{
+			
 		if (anim.GetBool ("Block")) {
 			sheild -= 0.5f;
 			barrier.transform.localScale = new Vector3(sheild/150 + 0.2f, sheild/150 + 0.2f, 1f); //resize
@@ -104,6 +109,7 @@ public class FightControl : MonoBehaviour {
 
 	void BeginSpecial()
 	{
+		movecontrol.speed = 0;
 		anim.SetTrigger("Special");
 		if (anim.name == "Fairy(Clone)") { //if fairy is casting it
 			//gameObject.GetComponent<Projectiles> ().Invoke ("Fire", 0.5f);
@@ -113,12 +119,14 @@ public class FightControl : MonoBehaviour {
 	void EndSpecial()
 	{
 		//anim.SetTrigger("Cancel");
+		movecontrol.speed = movecontrol.originalspeed;
 	}
 
 	void BeginUltimate()
 	{
 		if ( ultcharge >= 100.0f )
 		{
+			gameObject.GetComponent<SoundController> ().Play_Ultimate ();
 			anim.SetBool ("isUlting", true);
 			anim.SetTrigger( "Ultimate");
 			ultcharge = 0.0f;

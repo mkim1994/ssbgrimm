@@ -20,7 +20,7 @@ public class GameMain : MonoBehaviour {
 
 	public AudioClip fight;
 
-    private bool musicPlaying = false;
+    //public bool musicPlaying;
     public bool shouldDestroy = false;
 
     public Sprite[] countdownSprites;
@@ -30,24 +30,26 @@ public class GameMain : MonoBehaviour {
     private Image fullOverlay;
     private GoBack goback = null;
 
-    private void StartMusic()
+   /* private void StartMusic()
     {
         if ( !musicPlaying )
         {
+				
             GetComponent<AudioSource>().Play();
             musicPlaying = true;
         }
-    }
+    }*/
 
 	void Start()
 	{
 		// this should live until we quit the game, or go back to main menu
 		DontDestroyOnLoad(transform.gameObject);
-        StartMusic();
+        //StartMusic();
         fullOverlay = GetComponent<Image>();
         fullOverlay.enabled = false;
         overlay.enabled = false;
         goback = GetComponent<GoBack>();
+
 	}
 
 	// use this from buttons in the character select scene

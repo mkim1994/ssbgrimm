@@ -833,7 +833,7 @@ Rigidbody2D:
   m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vertical: Vertical1
   Horizontal: Horizontal1
-  jumpforce: 225
+  jumpforce: 80
   speed: 3
   direction: 0
 --- !u!114 &11498574

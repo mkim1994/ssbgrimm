@@ -21,6 +21,8 @@ public class MoveControl : MonoBehaviour {
 	public float direction;
 	private float oldDirection;
 
+	public float originalspeed;
+
 	void Start() {
 
 		if (transform.position.x > 1) { //if you spawn on the right side of the map flip transform (dumb fix but whatevs)
@@ -29,6 +31,7 @@ public class MoveControl : MonoBehaviour {
 		body = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		oldDirection = transform.localScale.x / Mathf.Abs (transform.localScale.x);
+		originalspeed = speed;
 	}
 
 	// Each frame - read controller movement input 
@@ -48,7 +51,7 @@ public class MoveControl : MonoBehaviour {
 			if ( ducking )
 			{
 				stand = true;
-			}							
+			}	
 		}
 		else 
 		{
@@ -79,6 +82,7 @@ public class MoveControl : MonoBehaviour {
 	// Steady rate - update physics movement
 	void FixedUpdate() {
 
+
 		// todo - h_vel in air should maybe be handled differently
 		//        i.e. fast characters don't move super fast in midair
 		//        maybe set a constant horizontal speed for all chars?
@@ -97,6 +101,7 @@ public class MoveControl : MonoBehaviour {
 
 		if ( jump )
 		{
+			speed = originalspeed;
 			// check that we're still grounded
 			if ( grounded )
 			{
@@ -110,6 +115,7 @@ public class MoveControl : MonoBehaviour {
 		}
 		else if ( crouch )
 		{
+			speed=0; //can't move while crouching
 			// check that we're on the ground
 			// don't let us crouch while jumping before we leave the ground
 			if ( grounded && !jumping )
@@ -121,6 +127,7 @@ public class MoveControl : MonoBehaviour {
 		}
 		else if ( stand )
 		{
+			speed = originalspeed;
 			if ( ducking )
 			{
 				stand = false;

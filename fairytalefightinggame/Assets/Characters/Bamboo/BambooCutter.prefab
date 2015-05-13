@@ -478,7 +478,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.12232697, y: -.742129207, z: 0}
+  m_LocalPosition: {x: 3.3670001, y: .776000023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 448312}
@@ -1341,7 +1341,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d4ff64f4acfaf834589ef1615aab0529, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1517,13 +1517,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b635c31a744df4483e11a50591ce36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack_Idle: {fileID: 8300000, guid: 7c1ccb4bb4a13ee48b8808b0cadb6485, type: 3}
-  getHit: {fileID: 8300000, guid: 24a9f135c5db3524aaef7ffe04372337, type: 3}
-  special: {fileID: 8300000, guid: e547895193fd3cc4e9eaf3f62350fdc8, type: 3}
-  ultimate: {fileID: 0}
-  block: {fileID: 0}
-  win: {fileID: 0}
-  enter: {fileID: 0}
+  attack_Idle: {fileID: 8300000, guid: 8b59e60a8ce472f42b0866f721905bd1, type: 3}
+  getHit: {fileID: 8300000, guid: 8ca599d2a0ec9ce479dda4b2b084b1eb, type: 3}
+  special: {fileID: 8300000, guid: 0a3bab961c7457b4f9b7d3dfcb30bf3e, type: 3}
+  ultimate: {fileID: 8300000, guid: 6794c2dd9af258b439e1c460650bc3a4, type: 3}
+  block: {fileID: 8300000, guid: f2de971599bf67a4f98f03c35481c89a, type: 3}
+  win: {fileID: 8300000, guid: ad36947eacbc7c645a7caeb3f59e4bd5, type: 3}
+  enter: {fileID: 8300000, guid: d4ff64f4acfaf834589ef1615aab0529, type: 3}
 --- !u!114 &11459870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1537,9 +1537,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vertical: Vertical1
   Horizontal: Horizontal1
-  jumpforce: 200
-  speed: 5
+  jumpforce: 180
+  speed: 2
   direction: 0
+  originalspeed: 0
 --- !u!114 &11474326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1641,7 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPercent: 0
-  damage: 20
+  damage: 10
   ultcharge: 15
   anim: {fileID: 0}
   fc: {fileID: 0}

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MenuButtons : MonoBehaviour {
 
+
 	public void LoadCharacterSelect()
 	{
 		Application.LoadLevel("CharacterSelect");

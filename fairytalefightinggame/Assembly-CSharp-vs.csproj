@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\CharSelectButtons.cs" />
      <Compile Include="Assets\Scripts\GameMain.cs" />
      <Compile Include="Assets\Scripts\GoBack.cs" />
+     <Compile Include="Assets\Scripts\MusicController.cs" />
+     <Compile Include="Assets\Scripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\Scripts\Projectiles.cs" />
      <Compile Include="Assets\UI\AppleScale.cs" />
      <Compile Include="Assets\UI\MenuButtons.cs" />
